@@ -1,6 +1,6 @@
-.characterPallete {
+.characterPalette {
   height: 50rem;
-  width: 50rem;
+  width: 95%;
   border: solid black;
   background-color: blue;
 }
