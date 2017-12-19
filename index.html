@@ -15,107 +15,80 @@
   </head>
 
   <body>
-      <div class="container">
-        <div class="characterPalette center-align">
-        </div>
-      </div>
+    <div class="container">
+      <div class="characterPalette center-align"></div>
+    </div>
 
-      <div class="row">
-        <form class="col s12">
-          <div class="teamPalette center-align">
-            <h2 id="PC"></h2>
-            <h2 id="Alt1"></h2>
-            <h2 id="Alt2"></h2>
-          </div>
-          <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="New Team Name" id="team_name" name="team_name" type="text" class="validate">
-          <label for="team_name">Team Name</label>
+    <div class="row">
+      <form class="col s12">
+        <div class="teamPalette center-align">
+          <h2 id="PC"></h2>
+          <h2 id="Alt1"></h2>
+          <h2 id="Alt2"></h2>
         </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="New Team Name" id="team_name" name="team_name" type="text" class="validate">
+            <label for="team_name">Team Name</label>
+          </div>
           <div class="row">
             <div class="input-field col s12">
               <textarea placeholder="What are the specific strengths and weaknesses of this team?" id="team_description" name="team_description" class="materialize-textarea"></textarea>
               <label for="team_description">Team Description</label>
             </div>
             <div class="input-field col s2">
-              <input placeholder="Wins" name="wins" type="number" class="circle validate">
+              <input placeholder="W" name="wins" type="number" class="circle validate">
               <label for="team_record">Wins</label>
             </div>
             <div class="input-field col s2">
-              <input placeholder="Losses" name="losses" type="number" class=" right circle validate">
+              <input placeholder="L" name="losses" type="number" class=" right circle validate">
               <label for="team_record">Losses</label>
             </div>
             <div class="input-field col s2">
-              <input placeholder="Draws" name="draws" type="number" class="left circle validate">
+              <input placeholder="D" name="draws" type="number" class="left circle validate">
               <label for="team_record">Draws</label>
             </div>
           </div>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Save New Team
-   <i class="material-icons right">send</i>
- </button>
+          <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">Save New Team</button>
+          <a class="savedTeam orange darken-3" href="#modal2"></a>
         </form>
       </div>
 
-    <div class="savedTeamData">
-      <h2 class="savedTeam"></h2>
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Character Name</h4>
+          <h5>Race</h5>
+          <p class="bio">Character Bio</p>
+          <ul>
+            <li class="power">F</li>
+            <li class="speed">F</li>
+            <li class="technique">F</li>
+            <li class="reach">F</li>
+            <li class="energy">F</li>
+            <li class="easeOfUse">F</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Exit</a>
+          <a href="#!" id="addToTeam" class="modal-action modal-close waves-effect waves-green btn-flat">Add to team</a>
+        </div>
+      </div>
 
-    </div>
+      <!-- Modal Structure -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4 class="teamName">Team Name</h4>
+        </div>
+        
+      </div>
 
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+      <script src="./src/index.js" charset="utf-8"></script>
 
-
- <!-- Modal Structure -->
- <div id="modal1" class="modal">
-   <div class="modal-content">
-     <h4>Character Name</h4>
-     <h5>Race</h5>
-     <p class="bio">Character Bio</p>
-     <ul>
-       <li class="power">F</li>
-       <li class="speed">F</li>
-       <li class="technique">F</li>
-       <li class="reach">F</li>
-       <li class="energy">F</li>
-       <li class="easeOfUse">F</li>
-     </ul>
-   </div>
-   <div class="modal-footer">
-     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Exit</a>
-     <a href="#!" id="addToTeam" class="modal-action modal-close waves-effect waves-green btn-flat">Add to team</a>
-   </div>
- </div>
-
- <!-- Modal Structure -->
- <div id="modal2" class="modal">
-   <div class="modal-content">
-     <h4 class="teamName">Team Name</h4>
-     <!-- <h5>Race</h5>
-     <p class="bio">Character Bio</p>
-     <ul>
-       <li class="power">F</li>
-       <li class="speed">F</li>
-       <li class="technique">F</li>
-       <li class="reach">F</li>
-       <li class="energy">F</li>
-       <li class="easeOfUse">F</li>
-     </ul> -->
-   </div>
-   <!-- <div class="modal-footer">
-     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Exit</a>
-     <a href="#!" id="addToTeam" class="modal-action modal-close waves-effect waves-green btn-flat">Add to team</a>
-   </div> -->
- </div>
-
-
-
-
-
-
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
-    <script src="./src/index.js" charset="utf-8"></script>
-
-  </body>
-</html>
+    </body>
+  </html>

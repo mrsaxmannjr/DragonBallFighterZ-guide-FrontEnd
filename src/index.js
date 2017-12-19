@@ -1,4 +1,4 @@
-const baseURL = "https://radiant-coast-65532.herokuapp.com/";
+const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
 var glbresponse = [];
 
 fetch(baseURL)
@@ -10,6 +10,11 @@ fetch(baseURL)
     for (var i = 0; i < response.length; i++) {
       var charAtag = document.createElement("a");
       charAtag.textContent = response[i].name;
+
+      // var charImg = document.createElement("img");
+      // charImg.src = response[i].image;
+      // charImg.alt = response[i].name;
+
       charAtag.classList.add(
         "waves-effect",
         "waves-light",
@@ -17,6 +22,7 @@ fetch(baseURL)
         "modal-trigger"
       );
       charAtag.href = "#modal1";
+      // charAtag.appendChild(charImg)
 
       charAtag.addEventListener("click", event => {
         for (var j = 0; j < glbresponse[0].length; j++) {
@@ -63,7 +69,7 @@ document.querySelector("#addToTeam").addEventListener("click", () => {
   }
 });
 
-fetch("https://radiant-coast-65532.herokuapp.com/", {
+fetch("https://shrouded-castle-10979.herokuapp.com/", {
   method: "post",
   body: JSON.stringify({ greeting: "hello" }),
   headers: new Headers({
