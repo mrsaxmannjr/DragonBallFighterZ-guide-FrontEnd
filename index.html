@@ -22,7 +22,7 @@
     <div class="row">
       <form class="col s12">
         <div class="teamPalette center-align">
-          <h2 id="PC"></h2>
+          <h2 id="PC" name="PC"></h2>
           <h2 id="Alt1"></h2>
           <h2 id="Alt2"></h2>
         </div>
@@ -50,9 +50,15 @@
             </div>
           </div>
           <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">Save New Team</button>
-          <a class="savedTeam orange darken-3" href="#modal2"></a>
         </form>
+        <a class="savedTeam orange darken-3" href="#modal2"></a>
       </div>
+      <div class = "col s3">
+                 <select class = "browser-default">
+                    <option value = "" disabled selected>Your Saved Teams</option>
+                  
+                 </select>
+              </div>
 
       <!-- Modal Structure -->
       <div id="modal1" class="modal">
@@ -79,8 +85,17 @@
       <div id="modal2" class="modal">
         <div class="modal-content">
           <h4 class="teamName">Team Name</h4>
+          <p class="teamDescription">Team Description</p>
+          <ul>
+            <li class="wins">0</li>
+            <li class="losses">0</li>
+            <li class="draws">0</li>
+          </ul>
+          <h2 class="PC"></h2>
+          <h2 class="Alt1"></h2>
+          <h2 class="Alt2"></h2>
         </div>
-        
+
       </div>
 
       <!--Import jQuery before materialize.js-->

@@ -1,5 +1,8 @@
 const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
 var glbresponse = [];
+var pointCharacter;
+var altCharacter1;
+var altCharacter2;
 
 fetch(baseURL)
   .then(response => response.json())
@@ -60,25 +63,17 @@ document.querySelector("#addToTeam").addEventListener("click", () => {
   if (!pointChar.textContent) {
     pointChar.textContent =
       "Point Character: " + document.querySelector("h4").textContent;
+    pointCharacter = document.querySelector("h4").textContent;
   } else if (!alt1.textContent) {
     alt1.textContent =
       "Alt Character 1: " + document.querySelector("h4").textContent;
+    altCharacter1 = document.querySelector("h4").textContent;
   } else if (!alt2.textContent) {
     alt2.textContent =
       "Alt Character 2: " + document.querySelector("h4").textContent;
+    altCharacter2 = document.querySelector("h4").textContent;
   }
 });
-
-fetch("https://shrouded-castle-10979.herokuapp.com/", {
-  method: "post",
-  body: JSON.stringify({ greeting: "hello" }),
-  headers: new Headers({
-    "Content-Type": "application/json"
-  })
-})
-  .then(response => response.json())
-  .then(response => response)
-  .catch(err => console.log(err));
 
 $(document).ready(function() {
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
@@ -95,8 +90,10 @@ function sendFormData() {
   })
     .then(response => response.json())
     .then(response => {
+      console.log(response);
       var savedTeam = document.querySelector(".savedTeam");
-      savedTeam.textContent = response.teamName;
+      savedTeam.textContent = response[0].teamName;
+
       savedTeam.classList.add(
         "waves-effect",
         "waves-light",
@@ -105,9 +102,28 @@ function sendFormData() {
       );
       savedTeam.href = "#modal2";
 
-      savedTeam.addEventListener("click", event => {
-        document.querySelector(".teamName").textContent = response.teamName;
+      savedTeam.addEventListener("click", () => {
+        document.querySelector(".teamName").textContent = response[0].teamName;
+        document.querySelector(".teamDescription").textContent =
+          response[0].teamDescription;
+        document.querySelector(".wins").textContent = response[0].wins;
+        document.querySelector(".losses").textContent = response[0].losses;
+        document.querySelector(".draws").textContent = response[0].draws;
+        document.querySelector(".PC").textContent =
+          "Point Character: " + response[0].pc;
+        document.querySelector(".Alt1").textContent =
+          "Alt Character 1: " + response[0].alt1;
+        document.querySelector(".Alt2").textContent =
+          "Alt Character 2: " + response[0].alt2;
       });
+      var dropDown = document.querySelector("select");
+
+      for (var i = 0; i < response.length; i++) {
+        var team = document.createElement("option");
+        team.value = response[i].teamName;
+        team.textContent = response[i].teamName;
+        dropDown.appendChild(team);
+      }
     })
     .catch(err => console.log(err));
 }
@@ -123,6 +139,9 @@ function getFormData() {
     teamDescription: data.get("team_description"),
     wins: data.get("wins"),
     losses: data.get("losses"),
-    draws: data.get("draws")
+    draws: data.get("draws"),
+    pc: pointCharacter,
+    alt1: altCharacter1,
+    alt2: altCharacter2
   };
 }
