@@ -12,20 +12,18 @@ fetch(baseURL)
 
     for (var i = 0; i < response.length; i++) {
       var charAtag = document.createElement("a");
-      charAtag.textContent = response[i].name;
 
-      // var charImg = document.createElement("img");
-      // charImg.src = response[i].image;
-      // charImg.alt = response[i].name;
+      var charImg = document.createElement("img");
+      charImg.src = response[i].image;
+      charImg.alt = response[i].name;
+      charImg.classList.add("charImg")
 
       charAtag.classList.add(
         "waves-effect",
         "waves-light",
-        "btn",
         "modal-trigger"
       );
       charAtag.href = "#modal1";
-      // charAtag.appendChild(charImg)
 
       charAtag.addEventListener("click", event => {
         for (var j = 0; j < glbresponse[0].length; j++) {
@@ -33,6 +31,7 @@ fetch(baseURL)
             document.querySelector("h4").textContent = glbresponse[0][j].name;
             document.querySelector("h5").textContent =
               "Race: " + glbresponse[0][j].race;
+            document.querySelector(".charImg").src = glbresponse[0][j].image;
             document.querySelector(".bio").textContent = glbresponse[0][j].bio;
             document.querySelector(".power").textContent =
               "Power: " + glbresponse[0][j].Power;
@@ -49,7 +48,7 @@ fetch(baseURL)
           }
         }
       });
-
+      charAtag.appendChild(charImg)
       charPalette.appendChild(charAtag);
     }
   })

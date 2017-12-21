@@ -1,6 +1,42 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.charImg {
+  max-height: 30px;
+  max-width: 30px;
+}
+form {
+  margin-top: 3rem;
+  background-color: blue;
+  border: solid black;
+  border-radius: 10%;
+  padding: 2rem;
+}
+
+/* .wld {
+  display: flex;
+} */
+
+input,
+textarea {
+  color: white;
+}
+
+.charDiv {
+  display: flex;
+  justify-content: center;
+}
+
 .characterPalette {
-  height: 30rem;
-  width: 95%;
+  height: 20rem;
+  width: 70rem;
   border: solid black;
   background-color: blue;
 }

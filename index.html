@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="./styles/reset.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -15,95 +16,119 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="characterPalette center-align"></div>
+
+    <header>
+      <h4>Welcome to the Dragon Ball FighterZ Team Builder!</h4>
+    </header>
+
+    <div class="charDiv">
+      <div class="characterPalette"></div>
     </div>
 
-    <div class="row">
-      <form class="col s12">
-        <div class="teamPalette center-align">
-          <h2 id="PC" name="PC"></h2>
-          <h2 id="Alt1"></h2>
-          <h2 id="Alt2"></h2>
-        </div>
+    <main>
+      <form class="col s8">
+
+        <ul class="teamPalette center-align">
+          <li id="PC"></li>
+          <li id="Alt1"></li>
+          <li id="Alt2"></li>
+        </ul>
+
+        <!-- <div class="row"> -->
         <div class="row">
-          <div class="input-field col s6">
-            <input placeholder="New Team Name" id="team_name" name="team_name" type="text" class="validate">
+          <div class="input-field col s12">
+            <input placeholder="Create Team Name" id="team_name" name="team_name" type="text" class="validate">
             <label for="team_name">Team Name</label>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea placeholder="What are the specific strengths and weaknesses of this team?" id="team_description" name="team_description" class="materialize-textarea"></textarea>
-              <label for="team_description">Team Description</label>
-            </div>
-            <div class="input-field col s2">
-              <input placeholder="W" name="wins" type="number" class="circle validate">
-              <label for="team_record">Wins</label>
-            </div>
-            <div class="input-field col s2">
-              <input placeholder="L" name="losses" type="number" class=" right circle validate">
-              <label for="team_record">Losses</label>
-            </div>
-            <div class="input-field col s2">
-              <input placeholder="D" name="draws" type="number" class="left circle validate">
-              <label for="team_record">Draws</label>
-            </div>
+        </div>
+        <!-- </div> -->
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea placeholder="What are the specific strengths and weaknesses of this team?" id="team_description" name="team_description" class="materialize-textarea"></textarea>
+            <label for="team_description">Team Description</label>
           </div>
+        </div>
+
+        <div class="wld row">
+          <div class="input-field col s2">
+            <input placeholder="W" name="wins" type="number" class="circle validate">
+            <label for="team_record">Wins</label>
+          </div>
+
+          <div class="input-field col s2">
+            <input placeholder="L" name="losses" type="number" class=" right circle validate">
+            <label for="team_record">Losses</label>
+          </div>
+
+          <div class="input-field col s2">
+            <input placeholder="D" name="draws" type="number" class="left circle validate">
+            <label for="team_record">Draws</label>
+          </div>
+        </div>
+
+        <div class="row center-align">
           <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">Save New Team</button>
-        </form>
-        <a class="savedTeam orange darken-3" href="#modal2"></a>
-      </div>
-      <div class = "col s3">
-                 <select class = "browser-default">
-                    <option value = "" disabled selected>Your Saved Teams</option>
-                  
-                 </select>
-              </div>
-
-      <!-- Modal Structure -->
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <h4>Character Name</h4>
-          <h5>Race</h5>
-          <p class="bio">Character Bio</p>
-          <ul>
-            <li class="power">F</li>
-            <li class="speed">F</li>
-            <li class="technique">F</li>
-            <li class="reach">F</li>
-            <li class="energy">F</li>
-            <li class="easeOfUse">F</li>
-          </ul>
         </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Exit</a>
-          <a href="#!" id="addToTeam" class="modal-action modal-close waves-effect waves-green btn-flat">Add to team</a>
+        <div class="row">
+          <a class="savedTeam orange darken-3 pulse" href="#modal2"></a>
         </div>
-      </div>
-
-      <!-- Modal Structure -->
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <h4 class="teamName">Team Name</h4>
-          <p class="teamDescription">Team Description</p>
-          <ul>
-            <li class="wins">0</li>
-            <li class="losses">0</li>
-            <li class="draws">0</li>
-          </ul>
-          <h2 class="PC"></h2>
-          <h2 class="Alt1"></h2>
-          <h2 class="Alt2"></h2>
+        <div class="row">
+          <div class="col s12">
+            <select class="browser-default">
+              <option value="" disabled="disabled" selected="selected">Your Saved Teams</option>
+            </select>
+          </div>
         </div>
 
+      </form>
+
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Character Name</h4>
+        <h5>Race</h5>
+        <img class="charImg" src="" alt="">
+        <p class="bio">Character Bio</p>
+        <ul>
+          <li class="power">F</li>
+          <li class="speed">F</li>
+          <li class="technique">F</li>
+          <li class="reach">F</li>
+          <li class="energy">F</li>
+          <li class="easeOfUse">F</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Exit</a>
+        <a href="#!" id="addToTeam" class="modal-action modal-close waves-effect waves-green btn-flat">Add to team</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4 class="teamName">Team Name</h4>
+        <p class="teamDescription">Team Description</p>
+        <ul>
+          <li class="wins">0</li>
+          <li class="losses">0</li>
+          <li class="draws">0</li>
+        </ul>
+        <h2 class="PC"></h2>
+        <h2 class="Alt1"></h2>
+        <h2 class="Alt2"></h2>
       </div>
 
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-      <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
-      <script src="./src/index.js" charset="utf-8"></script>
+    </div>
 
-    </body>
-  </html>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+    <script src="./src/index.js" charset="utf-8"></script>
+
+  </body>
+</html>
