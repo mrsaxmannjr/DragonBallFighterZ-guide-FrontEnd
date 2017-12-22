@@ -17,79 +17,107 @@
 
   <body>
 
-    <header>
-      <h4>Welcome to the Dragon Ball FighterZ Team Builder!</h4>
-    </header>
-
-    <div class="charDiv">
-      <div class="characterPalette"></div>
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <main>
-      <form class="col s8">
+<div class="background">
+  <div class="charDiv">
+    <div class="characterPalette"></div>
+  </div>
 
-        <ul class="teamPalette center-align">
-          <li id="PC"></li>
-          <li id="Alt1"></li>
-          <li id="Alt2"></li>
-        </ul>
-
-        <!-- <div class="row"> -->
-        <div class="row">
-          <div class="input-field col s12">
-            <input placeholder="Create Team Name" id="team_name" name="team_name" type="text" class="validate">
-            <label for="team_name">Team Name</label>
-          </div>
+  <main>
+    <form class="col s8">
+      <div class="row">
+        <div class="teamPalette">
+          <img id="PC" src="" alt="">
+          <img id="Alt1" src="" alt="">
+          <img id="Alt2" src="" alt="">
         </div>
-        <!-- </div> -->
-        <div class="row">
-          <div class="input-field col s12">
-            <textarea placeholder="What are the specific strengths and weaknesses of this team?" id="team_description" name="team_description" class="materialize-textarea"></textarea>
-            <label for="team_description">Team Description</label>
-          </div>
+      </div>
+
+      <!-- <div class="row"> -->
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Create Team Name" id="team_name" name="team_name" type="text" class="validate">
+          <label for="team_name">Team Name</label>
         </div>
+      </div>
+      <!-- </div> -->
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea placeholder="What are the specific strengths and weaknesses of this team?" id="team_description" name="team_description" class="materialize-textarea"></textarea>
+          <label for="team_description">Team Description</label>
+        </div>
+      </div>
 
-        <div class="wld row">
-          <div class="input-field col s2">
-            <input placeholder="W" name="wins" type="number" class="circle validate">
-            <label for="team_record">Wins</label>
-          </div>
-
-          <div class="input-field col s2">
-            <input placeholder="L" name="losses" type="number" class=" right circle validate">
-            <label for="team_record">Losses</label>
-          </div>
-
-          <div class="input-field col s2">
-            <input placeholder="D" name="draws" type="number" class="left circle validate">
-            <label for="team_record">Draws</label>
-          </div>
+      <div class="wld row">
+        <div class="input-field col s2">
+          <input placeholder="W" name="wins" type="number" class="circle validate">
+          <label for="team_record">Wins</label>
         </div>
 
-        <div class="row center-align">
-          <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">Save New Team</button>
-        </div>
-        <div class="row">
-          <a class="savedTeam orange darken-3 pulse" href="#modal2"></a>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <select class="browser-default">
-              <option value="" disabled="disabled" selected="selected">Your Saved Teams</option>
-            </select>
-          </div>
+        <div class="input-field col s2">
+          <input placeholder="L" name="losses" type="number" class=" right circle validate">
+          <label for="team_record">Losses</label>
         </div>
 
-      </form>
+        <div class="input-field col s2">
+          <input placeholder="D" name="draws" type="number" class="left circle validate">
+          <label for="team_record">Draws</label>
+        </div>
+      </div>
 
-    </main>
+      <div class="row center-align">
+        <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">Save New Team</button>
+      </div>
+      <div class="row">
+        <a class="savedTeam orange darken-3 pulse" href="#modal2"></a>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <select class="browser-default">
+            <option value="" disabled="disabled" selected="selected">Your Saved Teams</option>
+          </select>
+        </div>
+      </div>
+
+    </form>
+
+  </main>
+ </div>
+
+ <footer class="page-footer">
+
+         <div class="footer-copyright">
+           <div class="container">
+           © 2014 Copyright Text
+           <a class="grey-text text-lighten-4 right " href="#!">More Links</a>
+           </div>
+         </div>
+       </footer>
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
       <div class="modal-content">
-        <h4>Character Name</h4>
+        <h4 class="charName">Character Name</h4>
         <h5>Race</h5>
-        <img class="charImg" src="" alt="">
+        <img class="iconImg" src="" alt="">
         <p class="bio">Character Bio</p>
         <ul>
           <li class="power">F</li>
@@ -106,6 +134,8 @@
       </div>
     </div>
 
+
+
     <!-- Modal Structure -->
     <div id="modal2" class="modal">
       <div class="modal-content">
@@ -116,11 +146,10 @@
           <li class="losses">0</li>
           <li class="draws">0</li>
         </ul>
-        <h2 class="PC"></h2>
-        <h2 class="Alt1"></h2>
-        <h2 class="Alt2"></h2>
+        <img class="PC" src="" alt="">
+        <img class="Alt1" src="" alt="">
+        <img class="Alt2" src="" alt="">
       </div>
-
     </div>
 
     <!--Import jQuery before materialize.js-->

@@ -3,26 +3,29 @@ header {
   justify-content: center;
 }
 
+.background {
+  background: url("/Assets/logo.png") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
 main {
   display: flex;
   justify-content: center;
 }
 
 .charImg {
-  max-height: 30px;
-  max-width: 30px;
+  max-height: 150px;
+  max-width: 150px;
 }
 form {
-  margin-top: 3rem;
-  background-color: blue;
+  margin-top: .5rem;
+  background-color: rgba(159,57,49,0.95);
   border: solid black;
-  border-radius: 10%;
-  padding: 2rem;
 }
-
-/* .wld {
-  display: flex;
-} */
 
 input,
 textarea {
@@ -35,8 +38,15 @@ textarea {
 }
 
 .characterPalette {
-  height: 20rem;
-  width: 70rem;
+  max-height: 12rem;
+  width: 35rem;
   border: solid black;
-  background-color: blue;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  overflow: scroll;
+}
+
+footer {
+color: rgba(159,57,49,0.95);
 }

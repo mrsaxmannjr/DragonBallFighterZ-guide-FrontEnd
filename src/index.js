@@ -16,22 +16,21 @@ fetch(baseURL)
       var charImg = document.createElement("img");
       charImg.src = response[i].image;
       charImg.alt = response[i].name;
-      charImg.classList.add("charImg")
+      charImg.classList.add("charImg");
 
-      charAtag.classList.add(
-        "waves-effect",
-        "waves-light",
-        "modal-trigger"
-      );
+      charAtag.classList.add("waves-effect", "waves-light", "modal-trigger");
       charAtag.href = "#modal1";
+      charAtag.appendChild(charImg);
 
       charAtag.addEventListener("click", event => {
         for (var j = 0; j < glbresponse[0].length; j++) {
-          if (glbresponse[0][j].name === event.target.textContent) {
-            document.querySelector("h4").textContent = glbresponse[0][j].name;
+          if (glbresponse[0][j].name === event.target.alt) {
+            document.querySelector(".charName").textContent =
+              glbresponse[0][j].name;
             document.querySelector("h5").textContent =
               "Race: " + glbresponse[0][j].race;
-            document.querySelector(".charImg").src = glbresponse[0][j].image;
+            document.querySelector(".iconImg").src = glbresponse[0][j].image;
+            document.querySelector(".iconImg").alt = glbresponse[0][j].name;
             document.querySelector(".bio").textContent = glbresponse[0][j].bio;
             document.querySelector(".power").textContent =
               "Power: " + glbresponse[0][j].Power;
@@ -48,7 +47,6 @@ fetch(baseURL)
           }
         }
       });
-      charAtag.appendChild(charImg)
       charPalette.appendChild(charAtag);
     }
   })
@@ -59,22 +57,23 @@ var alt1 = document.querySelector("#Alt1");
 var alt2 = document.querySelector("#Alt2");
 
 document.querySelector("#addToTeam").addEventListener("click", () => {
-  if (!pointChar.textContent) {
-    pointChar.textContent =
-      "Point Character: " + document.querySelector("h4").textContent;
-    pointCharacter = document.querySelector("h4").textContent;
-  } else if (!alt1.textContent) {
-    alt1.textContent =
-      "Alt Character 1: " + document.querySelector("h4").textContent;
-    altCharacter1 = document.querySelector("h4").textContent;
-  } else if (!alt2.textContent) {
-    alt2.textContent =
-      "Alt Character 2: " + document.querySelector("h4").textContent;
-    altCharacter2 = document.querySelector("h4").textContent;
+  if (!pointChar.alt) {
+    pointChar.src = document.querySelector(".iconImg").src;
+    pointChar.alt = document.querySelector(".iconImg").alt;
+    pointCharacter = document.querySelector(".iconImg").src;
+  } else if (!alt1.alt) {
+    alt1.src = document.querySelector(".iconImg").src;
+    alt1.alt = document.querySelector(".iconImg").alt;
+    altCharacter1 = document.querySelector(".iconImg").src;
+  } else if (!alt2.alt) {
+    alt2.src = document.querySelector(".iconImg").src;
+    alt2.alt = document.querySelector(".iconImg").alt;
+    altCharacter2 = document.querySelector(".iconImg").src;
   }
 });
 
 $(document).ready(function() {
+  $(".button-collapse").sideNav();
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $(".modal").modal();
 });
@@ -108,12 +107,9 @@ function sendFormData() {
         document.querySelector(".wins").textContent = response[0].wins;
         document.querySelector(".losses").textContent = response[0].losses;
         document.querySelector(".draws").textContent = response[0].draws;
-        document.querySelector(".PC").textContent =
-          "Point Character: " + response[0].pc;
-        document.querySelector(".Alt1").textContent =
-          "Alt Character 1: " + response[0].alt1;
-        document.querySelector(".Alt2").textContent =
-          "Alt Character 2: " + response[0].alt2;
+        document.querySelector(".PC").src = response[0].pc;
+        document.querySelector(".Alt1").src = response[0].alt1;
+        document.querySelector(".Alt2").src = response[0].alt2;
       });
       var dropDown = document.querySelector("select");
 
