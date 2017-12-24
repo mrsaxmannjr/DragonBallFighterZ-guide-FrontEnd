@@ -1,35 +1,41 @@
-header {
-  display: flex;
-  justify-content: center;
-}
-
-.background {
-  background: url("/Assets/logo.png") no-repeat center fixed;
+html {
+  background: url("/Assets/logo.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 main {
   display: flex;
   justify-content: center;
+  flex: 1 0 auto;
+}
+
+.gif {
+  height: 44px;
+}
+
+.pickFighter {
+  background-color: rgba(159,57,49,0.95);
+  border: solid black;
+}
+
+form {
+  margin-top: 0.5rem;
+  background-color: rgba(159,57,49,0.95);
+  border: solid black;
 }
 
 .charImg {
   max-height: 150px;
   max-width: 150px;
-}
-form {
-  margin-top: .5rem;
-  background-color: rgba(159,57,49,0.95);
-  border: solid black;
-}
-
-input,
-textarea {
-  color: white;
 }
 
 .charDiv {
@@ -38,6 +44,7 @@ textarea {
 }
 
 .characterPalette {
+  background-color: rgba(159,57,49,0.95);
   max-height: 12rem;
   width: 35rem;
   border: solid black;
@@ -45,8 +52,4 @@ textarea {
   justify-content: center;
   flex-flow: row wrap;
   overflow: scroll;
-}
-
-footer {
-color: rgba(159,57,49,0.95);
 }

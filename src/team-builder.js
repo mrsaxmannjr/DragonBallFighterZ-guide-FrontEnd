@@ -72,11 +72,6 @@ document.querySelector("#addToTeam").addEventListener("click", () => {
   }
 });
 
-$(document).ready(function() {
-  $(".button-collapse").sideNav();
-  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-  $(".modal").modal();
-});
 
 function sendFormData() {
   fetch(baseURL, {
@@ -127,6 +122,8 @@ document.querySelector("form").addEventListener("submit", event => {
   sendFormData();
 });
 
+
+
 function getFormData() {
   const data = new FormData(document.querySelector("form"));
   return {
@@ -140,3 +137,9 @@ function getFormData() {
     alt2: altCharacter2
   };
 }
+
+$(document).ready(function() {
+  $(".button-collapse").sideNav();
+  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+  $(".modal").modal();
+});
