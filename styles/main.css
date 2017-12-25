@@ -28,7 +28,8 @@ main {
 }
 
 form {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   background-color: rgba(159,57,49,0.95);
   border: solid black;
 }
@@ -46,10 +47,39 @@ form {
 .characterPalette {
   background-color: rgba(159,57,49,0.95);
   max-height: 12rem;
-  width: 35rem;
+  max-width: 35rem;
   border: solid black;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   overflow: scroll;
+}
+
+.container {
+  padding-bottom: 1.25rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.radioBtn {
+   max-height: 118px;
+}
+
+ .ps4{
+  max-width: 80%;
+	height: auto;
+}
+
+.xbox{
+  max-width: 80%;
+	height: auto;
+}
+
+#controlScheme {
+  max-width: 100%;
+	height: auto;
 }
