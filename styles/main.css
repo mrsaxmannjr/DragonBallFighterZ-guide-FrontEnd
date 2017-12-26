@@ -124,3 +124,20 @@ form {
 #footerLogo {
   max-height: 3rem;
 }
+
+.collapsible-body {
+  background-color: rgba(159,57,49,0.95);
+}
+
+ul.browser-default li {
+  list-style-type: initial;
+}
+
+#dballz {
+  max-height: 2rem;
+}
+
+.tips {
+  background-color: rgba(159,57,49,0.95);
+  margin-top: 1rem;
+}
