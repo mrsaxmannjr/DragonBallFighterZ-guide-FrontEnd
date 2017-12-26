@@ -7,6 +7,7 @@ var altCharacter2;
 fetch(baseURL)
   .then(response => response.json())
   .then(response => {
+    console.log(response);
     glbresponse.push(response);
     var charPalette = document.querySelector(".characterPalette");
 
@@ -138,6 +139,5 @@ function getFormData() {
 
 $(document).ready(function() {
   $(".button-collapse").sideNav();
-  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $(".modal").modal();
 });
