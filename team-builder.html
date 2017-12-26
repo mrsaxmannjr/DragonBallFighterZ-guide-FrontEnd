@@ -24,10 +24,13 @@
               <a href="team-builder.html">Team Builder</a>
             </li>
             <li>
-              <a href="saved-teamz.html">Edit TeamZ</a>
+              <a href="saved-teamz.html">Saved TeamZ</a>
             </li>
             <li>
               <a href="controlz.html">ControlZ</a>
+            </li>
+            <li>
+              <a href="how-to-play.html">How to Play</a>
             </li>
             <li>
               <a href="index.html">About</a>
@@ -39,10 +42,13 @@
               <a href="team-builder.html">Team Builder</a>
             </li>
             <li>
-              <a href="saved-teamz.html">Edit TeamZ</a>
+              <a href="saved-teamz.html">Saved TeamZ</a>
             </li>
             <li>
               <a href="controlz.html">ControlZ</a>
+            </li>
+            <li>
+              <a href="how-to-play.html">How to Play</a>
             </li>
             <li>
               <a href="index.html">About</a>
@@ -53,21 +59,28 @@
     </header>
 
     <main>
-      <div>
-        <div class="center-align">
+      <div class="container">
+        <div class="center-align z-depth-5">
           <h4 class="pickFighter white-text col12">Choose 3 FighterZ!</h4>
         </div>
 
-        <div class="charDiv">
+        <div class="charDiv z-depth-5">
           <div class="characterPalette"></div>
         </div>
 
-        <form class="col s8 z-depth-5">
-          <div class="row teamDiv">
-            <div class="teamPalette">
-              <img id="PC" src="" alt="">
-              <img id="Alt1" src="" alt="">
-              <img id="Alt2" src="" alt="">
+        <form class=" teamForm col s8 z-depth-5">
+          <div class="teamPalette">
+            <div class="pcCol center-align">
+              <label class="white-text" for="PC">Point Character</label>
+              <img id="PC" src="/Assets/placeholder-pic.png" alt="">
+            </div>
+            <div class="pcCol center-align">
+              <label class="white-text" for="Alt1">Alternate 1</label>
+              <img id="Alt1" src="/Assets/placeholder-pic.png" alt="">
+            </div>
+            <div class="pcCol center-align">
+              <label class="white-text" for="Alt2">Alternate 2</label>
+              <img id="Alt2" src="/Assets/placeholder-pic.png" alt="">
             </div>
           </div>
 
@@ -103,7 +116,7 @@
           </div>
 
           <div class="row center-align">
-            <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">Save New Team</button>
+            <button class="btn waves-effect waves-light blue darken-2 z-depth-5" type="submit" name="action">Save New Team</button>
           </div>
           <div class="row center-align">
             <a class="savedTeam orange darken-3 pulse" href="#modal2"></a>
@@ -120,7 +133,7 @@
     </main>
 
     <footer class="page-footer blue darken-2">
-      <div class="container">
+      <div class="container footerDiv">
         © 2017 mrsaxmannjr
         <a class="grey-text text-lighten-4 right " href="https://www.bandainamcoent.com/games/dragon-ball-fighterz">DBFZ Official Page</a>
       </div>

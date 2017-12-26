@@ -72,7 +72,6 @@ document.querySelector("#addToTeam").addEventListener("click", () => {
   }
 });
 
-
 function sendFormData() {
   fetch(baseURL, {
     method: "POST",
@@ -117,12 +116,11 @@ function sendFormData() {
     })
     .catch(err => console.log(err));
 }
+
 document.querySelector("form").addEventListener("submit", event => {
   event.preventDefault();
   sendFormData();
 });
-
-
 
 function getFormData() {
   const data = new FormData(document.querySelector("form"));

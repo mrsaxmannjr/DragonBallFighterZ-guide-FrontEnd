@@ -16,6 +16,7 @@ main {
   display: flex;
   justify-content: center;
   flex: 1 0 auto;
+  min-height: 80vh;
 }
 
 .gif {
@@ -27,11 +28,31 @@ main {
   border: solid black;
 }
 
-form {
-  margin-top: 1rem;
+.teamPalette {
+  display: flex;
+  justify-content: space-evenly;
+  overflow: auto;
   margin-bottom: 1rem;
+}
+
+.pcCol, .footer{
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin-bottom: .85rem;
   background-color: rgba(159,57,49,0.95);
   border: solid black;
+}
+
+.teamForm {
+  padding: 1rem;
+}
+
+#PC, #Alt1, #Alt2 {
+  max-height: 7rem;
+
 }
 
 .charImg {
@@ -39,47 +60,67 @@ form {
   max-width: 150px;
 }
 
-.charDiv {
-  display: flex;
-  justify-content: center;
-}
-
 .characterPalette {
   background-color: rgba(159,57,49,0.95);
-  max-height: 12rem;
-  max-width: 35rem;
+  margin-bottom: .85rem;
+  max-height: 11rem;
+  max-width: 100%;
   border: solid black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-flow: row wrap;
-  overflow: scroll;
-}
-
-.container {
-  padding-bottom: 1.25rem;
+  overflow: auto;
 }
 
 .social {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  padding-left: 1rem;
 }
 
-.radioBtn {
-   max-height: 118px;
-}
-
- .ps4{
-  max-width: 80%;
-	height: auto;
+.ps4 {
+   max-width: 70%;
+   max-height: auto;
 }
 
 .xbox{
-  max-width: 80%;
-	height: auto;
+  max-width: 70%;
+  max-height: auto;
+}
+
+.controllerImg {
+  background-color: rgba(159,57,49,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: .50rem;
 }
 
 #controlScheme {
   max-width: 100%;
 	height: auto;
+}
+
+.tableDiv {
+  max-height: 47vh;
+  max-width: 100%;
+  background-color: rgba(159,57,49,0.95);
+  overflow: auto;
+}
+
+.addBorder, th, td {
+  border: solid black;
+}
+
+.addFrame {
+  padding: 1rem;
+}
+
+.footerDiv {
+  padding-bottom: 1.25rem;
+}
+
+#footerLogo {
+  max-height: 3rem;
 }
