@@ -53,6 +53,11 @@ fetch(baseURL)
 var pointChar = document.querySelector("#PC");
 var alt1 = document.querySelector("#Alt1");
 var alt2 = document.querySelector("#Alt2");
+var tName = document.querySelector("#team_name");
+var tDescription = document.querySelector("#team_description");
+// var tWins = document.querySelector("#wins");
+// var tLosses = document.querySelector("#losses");
+// var tDraws = document.querySelector("#draws");
 
 document.querySelector("#addToTeam").addEventListener("click", () => {
   if (!pointChar.alt) {
@@ -111,7 +116,17 @@ function sendFormData() {
 
 document.querySelector("form").addEventListener("submit", event => {
   event.preventDefault();
-  sendFormData();
+  if (!pointChar.alt || !alt1.alt || !alt2.alt) {
+    window.alert("Your team is incomplete, please choose 3 FighterZ!");
+  } else if (!tName.value) {
+    window.alert("Your Team Name is incomplete, please give your team of FighterZ a fitting Team Name!");
+  } else if (!tDescription.value) {
+    window.alert("Your Team Description is incomplete, please give your team of FighterZ a fitting Team Description!");
+  // } else if (!tWins.value || !tLosses.value || tDraws.value) {
+  //   window.alert("Your Team Record is incomplete, please update any Wins, Losses or Draws for your team of FighterZ!");
+  } else {
+    sendFormData();
+  }
 });
 
 function getFormData() {
