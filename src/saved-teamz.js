@@ -39,7 +39,7 @@ fetch(`${baseURL}saved-teamz`)
   .catch(err => console.log(err));
 
 function sendFormData() {
-  fetch(baseURL, {
+  fetch(`${baseURL}saved-teamz`, {
     method: "POST",
     headers: new Headers({
       "Content-Type": "application/json"
@@ -49,18 +49,18 @@ function sendFormData() {
     .then(response => response.json())
     .then(response => {
       console.log(response);
-      
+
     })
     .catch(err => console.log(err));
 }
 
-document.querySelector("form").addEventListener("submit", event => {
+document.querySelector("#hideForm").addEventListener("submit", event => {
   event.preventDefault();
   sendFormData();
 });
 
 function getFormData() {
-  const data = new FormData(document.querySelector("form"));
+  const data = new FormData(document.querySelector("#hideForm"));
   return {
     teamName: data.get("team_name"),
     teamDescription: data.get("team_description"),
