@@ -48,8 +48,14 @@ function sendFormData() {
   })
     .then(response => response.json())
     .then(response => {
-      console.log(response);
-
+      var message = document.querySelector("p");
+      message.textContent = response;
+      setTimeout(() => {
+        message.textContent = "";
+      }, 4000);
+      setTimeout(() => {
+        window.location.reload(true);
+      }, 4000);
     })
     .catch(err => console.log(err));
 }
@@ -75,7 +81,6 @@ function getFormData() {
 
 document.querySelector("select").addEventListener("input", () => {
   document.querySelector("#hideForm").style.display = "";
-  document.querySelector(".seeTeams").style.display = "";
 });
 
 document.querySelector("#wins").addEventListener("click", () => {

@@ -80,7 +80,11 @@ function sendFormData() {
   })
     .then(response => response.json())
     .then(response => {
-      console.log(response);
+      var message = document.querySelector("p");
+      message.textContent = "Added To Your Saved TeamZ!";
+      setTimeout(() => {
+        message.textContent = "";
+      }, 4000);
       var savedTeam = document.querySelector(".savedTeam");
       savedTeam.textContent = response[0].teamName;
       savedTeam.classList.add(
