@@ -114,7 +114,7 @@ form {
 }
 
 .addFrame {
-  padding: 1rem;
+  padding: .25rem;
 }
 
 .footerDiv {
@@ -127,6 +127,8 @@ form {
 
 .collapsible-body {
   background-color: rgba(159,57,49,0.95);
+  border: solid black;
+  border-top: none;
 }
 
 ul.browser-default li {
@@ -140,4 +142,27 @@ ul.browser-default li {
 .tips {
   background-color: rgba(159,57,49,0.95);
   margin-top: 1rem;
+  padding-top: .5rem;
+  padding-bottom: 1.5rem;
+}
+
+.seeTeams {
+  background-color: rgba(159,57,49,0.95);
+  border: solid black;
+  padding: 1rem;
+  margin-bottom: .85rem;
+}
+
+.collapsible-header {
+  border: solid black;
+  margin-top: 1rem;
+}
+
+.video-container {
+  background-color: rgba(159,57,49,0.95);
+  border: solid black;
+}
+
+.record {
+  padding-left: .75rem;
 }

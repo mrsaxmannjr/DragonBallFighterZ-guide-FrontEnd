@@ -1,4 +1,5 @@
 const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
+
 var glbresponse = [];
 var pointCharacter;
 var altCharacter1;
@@ -10,19 +11,15 @@ fetch(baseURL)
     console.log(response);
     glbresponse.push(response);
     var charPalette = document.querySelector(".characterPalette");
-
     for (var i = 0; i < response.length; i++) {
       var charAtag = document.createElement("a");
-
       var charImg = document.createElement("img");
       charImg.src = response[i].image;
       charImg.alt = response[i].name;
       charImg.classList.add("charImg");
-
       charAtag.classList.add("waves-effect", "waves-light", "modal-trigger");
       charAtag.href = "#modal1";
       charAtag.appendChild(charImg);
-
       charAtag.addEventListener("click", event => {
         for (var j = 0; j < glbresponse[0].length; j++) {
           if (glbresponse[0][j].name === event.target.alt) {
@@ -86,7 +83,6 @@ function sendFormData() {
       console.log(response);
       var savedTeam = document.querySelector(".savedTeam");
       savedTeam.textContent = response[0].teamName;
-
       savedTeam.classList.add(
         "waves-effect",
         "waves-light",
@@ -94,7 +90,6 @@ function sendFormData() {
         "modal-trigger"
       );
       savedTeam.href = "#modal2";
-
       savedTeam.addEventListener("click", () => {
         document.querySelector(".teamName").textContent = response[0].teamName;
         document.querySelector(".teamDescription").textContent =
@@ -106,14 +101,6 @@ function sendFormData() {
         document.querySelector(".Alt1").src = response[0].alt1;
         document.querySelector(".Alt2").src = response[0].alt2;
       });
-      var dropDown = document.querySelector("select");
-
-      for (var i = 0; i < response.length; i++) {
-        var team = document.createElement("option");
-        team.value = response[i].teamName;
-        team.textContent = response[i].teamName;
-        dropDown.appendChild(team);
-      }
     })
     .catch(err => console.log(err));
 }

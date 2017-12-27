@@ -5,7 +5,7 @@ var controllerImg = document.querySelector(".controllerImg");
 
 form.addEventListener("change", event => {
   if (event.target.value === "ps4") {
-    placeholder.src = "/Assets/ps4.jpg";
+    placeholder.src = "/Assets/ps4.jpeg";
     controllerImg.classList.add("addBorder");
     controllerImg.classList.add("addFrame");
     tableDiv.classList.add("addBorder");
@@ -24,7 +24,7 @@ form.addEventListener("change", event => {
     document.getElementById("td11").textContent = "Square + Triangle";
     document.getElementById("td12").textContent = "Triangle + Circle";
   } else if (event.target.value === "xbox") {
-    placeholder.src = "/Assets/xbox.jpg";
+    placeholder.src = "/Assets/xbox.jpeg";
     controllerImg.classList.add("addBorder");
     controllerImg.classList.add("addFrame");
     tableDiv.classList.add("addBorder");

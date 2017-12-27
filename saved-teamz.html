@@ -12,7 +12,6 @@
 
   <body>
     <header>
-
       <nav>
         <div class="nav-wrapper blue darken-2">
           <img class="gif" src="/Assets/True_Kamehameha.gif" alt="">
@@ -67,9 +66,74 @@
 
         <form class="col s8 z-depth-5">
           <select class="browser-default">
-            <option value="" disabled="disabled" selected="selected">Your Saved Teams</option>
+            <option value="" disabled="disabled" selected="selected">Choose A Saved Team</option>
           </select>
         </form>
+
+        <form id="hideForm" style="display:none;" class="teamForm col s8 z-depth-5">
+          <div class="teamPalette">
+            <div class="pcCol center-align">
+              <label class="white-text" for="PC">Point Character</label>
+              <img id="PC" src="/Assets/placeholder-pic.png" alt="">
+            </div>
+            <div class="pcCol center-align">
+              <label class="white-text" for="Alt1">Alternate 1</label>
+              <img id="Alt1" src="/Assets/placeholder-pic.png" alt="">
+            </div>
+            <div class="pcCol center-align">
+              <label class="white-text" for="Alt2">Alternate 2</label>
+              <img id="Alt2" src="/Assets/placeholder-pic.png" alt="">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="record white-text">
+              <h6>Edit Team Name</h6>
+            </div>
+            <div class="input-field col s12">
+              <input id="team_name" name="team_name" type="text" class="white-text validate">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="record white-text">
+              <h6>Edit Team Description</h6>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="team_description" name="team_description" class="white-text materialize-textarea"></textarea>
+            </div>
+          </div>
+
+          <div class="wld row">
+            <div class="record white-text">
+              <h6>Edit Current Record</h6>
+            </div>
+            <div class="input-field col s2">
+              <input id="wins" name="wins" type="number" class="white-text circle validate">
+              <label style="display:none;" class="hideWLabel white-text" for="team_record">Wins</label>
+            </div>
+
+            <div class="input-field col s2">
+              <input id="losses" name="losses" type="number" class="white-text right circle validate">
+              <label style="display:none;" class="hideLLabel white-text" for="team_record">Losses</label>
+            </div>
+
+            <div class="input-field col s2">
+              <input id="draws" name="draws" type="number" class="white-text left circle validate">
+              <label style="display:none;" class="hideDLabel white-text" for="team_record">Draws</label>
+            </div>
+          </div>
+
+          <div class="row center-align">
+            <button class="btn waves-effect waves-light blue darken-2 z-depth-5" type="submit" name="action">Save Team Changes</button>
+          </div>
+        </form>
+
+        <div style="display:none;" class="seeTeams center-align z-depth-5">
+          <a href="team-builder.html">
+            <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons right">cloud</i>Build A New Team</button>
+          </a>
+        </div>
       </div>
     </main>
 
