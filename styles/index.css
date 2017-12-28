@@ -1,0 +1,16 @@
+.gif {
+  height: 44px;
+}
+
+.parallax-container {
+      height: 200px;
+    }
+
+.pcCol, .footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerDiv {
+  padding-bottom: 1.25rem;
+}
