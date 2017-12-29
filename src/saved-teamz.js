@@ -2,8 +2,11 @@ const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
 
 var glbresponse = [];
 var pointCharacter;
+var pointCharName;
 var altCharacter1;
+var alt1CharName;
 var altCharacter2;
+var alt2CharName;
 
 fetch(`${baseURL}saved-teamz`)
   .then(response => response.json())
@@ -21,10 +24,16 @@ fetch(`${baseURL}saved-teamz`)
         if (glbresponse[0][j].teamName === event.target.value) {
           document.querySelector("#PC").src = glbresponse[0][j].pc;
           pointCharacter = document.querySelector("#PC").src;
+          document.querySelector("#PCName").textContent = glbresponse[0][j].pcName;
+          pointCharName = document.querySelector("#PCName").textContent;
           document.querySelector("#Alt1").src = glbresponse[0][j].alt1;
           altCharacter1 = document.querySelector("#Alt1").src;
+          document.querySelector("#Alt1Name").textContent = glbresponse[0][j].alt1Name;
+          alt1CharName = document.querySelector("#Alt1Name").textContent;
           document.querySelector("#Alt2").src = glbresponse[0][j].alt2;
           altCharacter2 = document.querySelector("#Alt2").src;
+          document.querySelector("#Alt2Name").textContent = glbresponse[0][j].alt2Name;
+          alt2CharName = document.querySelector("#Alt2Name").textContent;
           document.querySelector("#team_name").value =
             glbresponse[0][j].teamName;
           document.querySelector("#team_description").value =
@@ -52,10 +61,10 @@ function sendFormData() {
       message.textContent = response;
       setTimeout(() => {
         message.textContent = "";
-      }, 4000);
+      }, 5000);
       setTimeout(() => {
         window.location.reload(true);
-      }, 4000);
+      }, 5000);
     })
     .catch(err => console.log(err));
 }
@@ -74,8 +83,11 @@ function getFormData() {
     losses: data.get("losses"),
     draws: data.get("draws"),
     pc: pointCharacter,
+    pcName: pointCharName,
     alt1: altCharacter1,
-    alt2: altCharacter2
+    alt1Name: alt1CharName,
+    alt2: altCharacter2,
+    alt2Name: alt2CharName
   };
 }
 

@@ -23,16 +23,16 @@ main {
   height: 44px;
 }
 
-.pickFighter {
-  background-color: rgba(159,57,49,0.95);
-  border: solid black;
-}
-
 .teamPalette {
   display: flex;
   justify-content: space-evenly;
   overflow: auto;
   margin-bottom: 1rem;
+}
+
+.pickFighter {
+  background-color: rgba(159,57,49,0.95);
+  border: solid black;
 }
 
 .pcCol, .footer{
@@ -93,7 +93,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: .50rem;
+  margin-bottom: .85rem;
 }
 
 #controlScheme {

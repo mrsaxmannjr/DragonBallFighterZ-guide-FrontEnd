@@ -65,7 +65,7 @@
       </div>
 
       <div class="charDiv z-depth-5">
-        <div class="characterPalette"></div>
+        <div class="characterPalette "></div>
       </div>
 
       <form class=" teamForm col s8 z-depth-5">
@@ -73,14 +73,19 @@
           <div class="pcCol center-align">
             <label class="white-text" for="PC">Point Character</label>
             <img id="PC" src="/Assets/placeholder-pic.png" alt="">
+            <label id="PCName" class="white-text" for="PC"></label>
+
           </div>
           <div class="pcCol center-align">
             <label class="white-text" for="Alt1">Alternate 1</label>
             <img id="Alt1" src="/Assets/placeholder-pic.png" alt="">
+            <label id="Alt1Name" class="white-text" for="Alt1"></label>
+
           </div>
           <div class="pcCol center-align">
             <label class="white-text" for="Alt2">Alternate 2</label>
             <img id="Alt2" src="/Assets/placeholder-pic.png" alt="">
+            <label id="Alt2Name" class="white-text" for="Alt2"></label>
           </div>
         </div>
 
@@ -119,18 +124,18 @@
         </div>
 
         <div class="row center-align">
-          <button class="btn waves-effect waves-light blue darken-2 z-depth-5" type="submit" name="action">Save New Team</button>
+          <button class="btn waves-effect waves-light blue darken-2 z-depth-5" type="submit" name="action"><i class="material-icons right">add_circle</i>Save New Team</button>
         </div>
 
-        <p class="center-align white-text"></p>
         <div class="row center-align">
-          <a class="savedTeam orange darken-3 pulse" href="#modal2"></a>
+          <a class="savedTeam waves-effect waves-light black-text yellow accent-4 pulse z-depth-5" href="#modal2"></a>
         </div>
+        <p class="center-align white-text"></p>
       </form>
 
       <div class="seeTeams center-align z-depth-5">
         <a href="saved-teamz.html">
-          <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons right">cloud</i>Your Saved Teams</button>
+          <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons right">send</i>Your Saved Teams</button>
         </a>
       </div>
     </div>
@@ -160,8 +165,8 @@
       </ul>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Exit</a>
-      <a href="#!" id="addToTeam" class="white-text modal-action modal-close waves-effect waves-green btn-flat blue darken-2 ">Add to team</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-light btn z-depth-5 yellow accent-4 black-text">Exit</a>
+      <a href="#!" id="addToTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 blue darken-2 "><i class="material-icons right">add_circle</i>Add to team</a>
     </div>
   </div>
 
@@ -180,7 +185,7 @@
       <img class="Alt2" src="" alt="">
     </div>
     <div class="modal-footer">
-      <a href="#!" class="white-text modal-action modal-close waves-effect waves-green btn-flat blue darken-2">Exit</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-light btn z-depth-5 yellow accent-4 black-text">Exit</a>
     </div>
   </div>
 

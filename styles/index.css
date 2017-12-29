@@ -4,7 +4,11 @@
 
 .parallax-container {
       height: 200px;
-    }
+}
+
+a {
+  color: inherit;
+} 
 
 .pcCol, .footer {
   display: flex;

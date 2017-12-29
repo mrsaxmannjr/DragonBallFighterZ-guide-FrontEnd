@@ -2,8 +2,11 @@ const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
 
 var glbresponse = [];
 var pointCharacter;
+var pointCharName;
 var altCharacter1;
+var alt1CharName;
 var altCharacter2;
+var alt2CharName;
 
 fetch(baseURL)
   .then(response => response.json())
@@ -17,7 +20,7 @@ fetch(baseURL)
       charImg.src = response[i].image;
       charImg.alt = response[i].name;
       charImg.classList.add("charImg");
-      charAtag.classList.add("waves-effect", "waves-light", "modal-trigger");
+      charAtag.classList.add("modal-trigger");
       charAtag.href = "#modal1";
       charAtag.appendChild(charImg);
       charAtag.addEventListener("click", event => {
@@ -51,27 +54,33 @@ fetch(baseURL)
   .catch(err => console.log(err));
 
 var pointChar = document.querySelector("#PC");
+var PCName = document.querySelector("#PCName");
 var alt1 = document.querySelector("#Alt1");
+var A1Name = document.querySelector("#Alt1Name");
 var alt2 = document.querySelector("#Alt2");
+var A2Name = document.querySelector("#Alt2Name");
 var tName = document.querySelector("#team_name");
 var tDescription = document.querySelector("#team_description");
-// var tWins = document.querySelector("#wins");
-// var tLosses = document.querySelector("#losses");
-// var tDraws = document.querySelector("#draws");
 
 document.querySelector("#addToTeam").addEventListener("click", () => {
   if (!pointChar.alt) {
     pointChar.src = document.querySelector(".iconImg").src;
     pointChar.alt = document.querySelector(".iconImg").alt;
     pointCharacter = document.querySelector(".iconImg").src;
+    PCName.textContent = document.querySelector(".charName").textContent;
+    pointCharName = document.querySelector(".charName").textContent;
   } else if (!alt1.alt) {
     alt1.src = document.querySelector(".iconImg").src;
     alt1.alt = document.querySelector(".iconImg").alt;
     altCharacter1 = document.querySelector(".iconImg").src;
+    A1Name.textContent = document.querySelector(".charName").textContent;
+    alt1CharName = document.querySelector(".charName").textContent;
   } else if (!alt2.alt) {
     alt2.src = document.querySelector(".iconImg").src;
     alt2.alt = document.querySelector(".iconImg").alt;
     altCharacter2 = document.querySelector(".iconImg").src;
+    A2Name.textContent = document.querySelector(".charName").textContent;
+    alt2CharName = document.querySelector(".charName").textContent;
   }
 });
 
@@ -86,15 +95,13 @@ function sendFormData() {
     .then(response => response.json())
     .then(response => {
       var message = document.querySelector("p");
-      message.textContent = "Added To Your Saved TeamZ!";
+      message.textContent = response[0].teamName + " was added To Your Saved TeamZ!";
       setTimeout(() => {
         message.textContent = "";
       }, 4000);
       var savedTeam = document.querySelector(".savedTeam");
       savedTeam.textContent = response[0].teamName;
       savedTeam.classList.add(
-        "waves-effect",
-        "waves-light",
         "btn",
         "modal-trigger"
       );
@@ -122,8 +129,6 @@ document.querySelector("form").addEventListener("submit", event => {
     window.alert("Your Team Name is incomplete, please give your team of FighterZ a fitting Team Name!");
   } else if (!tDescription.value) {
     window.alert("Your Team Description is incomplete, please give your team of FighterZ a fitting Team Description!");
-  // } else if (!tWins.value || !tLosses.value || tDraws.value) {
-  //   window.alert("Your Team Record is incomplete, please update any Wins, Losses or Draws for your team of FighterZ!");
   } else {
     sendFormData();
   }
@@ -138,8 +143,11 @@ function getFormData() {
     losses: data.get("losses"),
     draws: data.get("draws"),
     pc: pointCharacter,
+    pcName: pointCharName,
     alt1: altCharacter1,
-    alt2: altCharacter2
+    alt1Name: alt1CharName,
+    alt2: altCharacter2,
+    alt2Name: alt2CharName
   };
 }
 

@@ -60,11 +60,11 @@
 
     <main>
       <div class="container">
-        <div class="center-align">
-          <h4 class="pickFighter white-text col10">Edit Your TeamZ!</h4>
+        <div class="center-align z-depth-5">
+          <h4 class="pickFighter white-text col12">Edit Your TeamZ!</h4>
         </div>
 
-        <form class="col s8 z-depth-5">
+        <form class="col s12 z-depth-5">
           <select class="browser-default yellow accent-4">
             <option value="" disabled="disabled" selected="selected">Choose A Saved Team</option>
           </select>
@@ -75,14 +75,17 @@
             <div class="pcCol center-align">
               <label class="white-text" for="PC">Point Character</label>
               <img id="PC" src="/Assets/placeholder-pic.png" alt="">
+              <label id="PCName" class="white-text" for="PC"></label>
             </div>
             <div class="pcCol center-align">
               <label class="white-text" for="Alt1">Alternate 1</label>
               <img id="Alt1" src="/Assets/placeholder-pic.png" alt="">
+              <label id="Alt1Name" class="white-text" for="Alt1"></label>
             </div>
             <div class="pcCol center-align">
               <label class="white-text" for="Alt2">Alternate 2</label>
               <img id="Alt2" src="/Assets/placeholder-pic.png" alt="">
+              <label id="Alt2Name" class="white-text" for="Alt2"></label>
             </div>
           </div>
 
@@ -125,14 +128,14 @@
           </div>
 
           <div class="row center-align">
-            <button class="btn waves-effect waves-light blue darken-2 z-depth-5" type="submit" name="action">Save Team Changes</button>
+            <button class="btn waves-effect waves-light blue darken-2 z-depth-5" type="submit" name="action"><i class="material-icons right">add_circle</i>Save Team Changes</button>
           </div>
         <p class="center-align white-text"></p>
         </form>
 
         <div class="seeTeams center-align z-depth-5">
           <a href="team-builder.html">
-            <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons right">cloud</i>Build A New Team</button>
+            <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons right">send</i>Build A New Team</button>
           </a>
         </div>
       </div>
