@@ -25,7 +25,7 @@ main {
 
 .teamPalette {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   overflow: auto;
   margin-bottom: 1rem;
 }
