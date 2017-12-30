@@ -53,7 +53,6 @@ form {
 #PC, #Alt1, #Alt2 {
   max-height: 7rem;
   border: solid #ffd600;
-
 }
 
 .charImg {
@@ -61,8 +60,6 @@ form {
   max-width: auto;
   border: solid #ffd600;
 }
-
-
 
 .characterPalette {
   background-color: rgba(159,57,49,0.95);
