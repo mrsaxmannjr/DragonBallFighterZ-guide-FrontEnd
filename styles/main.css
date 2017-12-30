@@ -58,10 +58,11 @@ form {
 
 .charImg {
   max-height: 150px;
-  max-width: 150px;
+  max-width: auto;
   border: solid #ffd600;
-
 }
+
+
 
 .characterPalette {
   background-color: rgba(159,57,49,0.95);
