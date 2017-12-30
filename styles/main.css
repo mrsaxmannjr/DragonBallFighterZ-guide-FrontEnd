@@ -52,17 +52,21 @@ form {
 
 #PC, #Alt1, #Alt2 {
   max-height: 7rem;
+  border: solid #ffd600;
+
 }
 
 .charImg {
   max-height: 150px;
   max-width: 150px;
+  border: solid #ffd600;
+
 }
 
 .characterPalette {
   background-color: rgba(159,57,49,0.95);
   margin-bottom: .85rem;
-  max-height: 11rem;
+  max-height: 11.4rem;
   max-width: 100%;
   border: solid black;
   display: flex;
