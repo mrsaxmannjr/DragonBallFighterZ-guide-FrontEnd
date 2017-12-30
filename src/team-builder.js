@@ -4,7 +4,7 @@ var glbresponse = [];
 var pointCharacter;
 var pointCharName;
 var altCharacter1;
-var alt1CharName; 
+var alt1CharName;
 var altCharacter2;
 var alt2CharName;
 
@@ -201,7 +201,7 @@ function sendFormData() {
     .then(response => {
       var message = document.querySelector("p");
       message.textContent =
-        response[0].teamName + " was added To Your Saved TeamZ!";
+        response[0].teamName + " was added To your Saved TeamZ!";
       setTimeout(() => {
         message.textContent = "";
       }, 4000);
