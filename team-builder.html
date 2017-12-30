@@ -72,19 +72,25 @@
         <div class="teamPalette">
           <div class="pcCol center-align">
             <label class="white-text" for="PC">Point Character</label>
-            <img id="PC" src="/Assets/placeholder-pic.png" alt="">
+            <a id="pcAtag" href="#!">
+              <img id="PC" src="/Assets/placeholder-pic.png" alt="">
+            </a>
             <label id="PCName" class="white-text" for="PC"></label>
-
           </div>
+
           <div class="pcCol center-align">
             <label class="white-text" for="Alt1">Alternate 1</label>
-            <img id="Alt1" src="/Assets/placeholder-pic.png" alt="">
+            <a href="#!" id="alt1Atag">
+              <img id="Alt1" src="/Assets/placeholder-pic.png" alt="">
+            </a>
             <label id="Alt1Name" class="white-text" for="Alt1"></label>
 
           </div>
           <div class="pcCol center-align">
             <label class="white-text" for="Alt2">Alternate 2</label>
-            <img id="Alt2" src="/Assets/placeholder-pic.png" alt="">
+            <a href="#!" id="alt2Atag">
+              <img id="Alt2" src="/Assets/placeholder-pic.png" alt="">
+            </a>
             <label id="Alt2Name" class="white-text" for="Alt2"></label>
           </div>
         </div>
@@ -127,15 +133,12 @@
           <button class="btn waves-effect waves-light blue darken-2 z-depth-5" type="submit" name="action"><i class="material-icons right">add_circle</i>Save New Team</button>
         </div>
 
-        <div class="row center-align">
-          <a class="savedTeam waves-effect waves-light black-text yellow accent-4 pulse z-depth-5" href="#modal2"></a>
-        </div>
         <p class="center-align white-text"></p>
       </form>
 
       <div class="seeTeams center-align z-depth-5">
         <a href="saved-teamz.html">
-          <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons right">send</i>Your Saved Teams</button>
+          <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons right">arrow_forward</i>Your Saved Teams</button>
         </a>
       </div>
     </div>
@@ -152,7 +155,7 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4 class="charName">Character Name</h4>
-      <h5>Race</h5>
+      <h5 class="charRace">Race</h5>
       <img class="iconImg" src="" alt="">
       <p class="bio">Character Bio</p>
       <ul>
@@ -170,22 +173,30 @@
     </div>
   </div>
 
-  <!-- Team Modal Structure -->
-  <div id="modal2" class="modal">
+  <!-- Team Member Modal Structure -->
+  <div id="modal3" class="modal">
     <div class="modal-content">
-      <h4 class="teamName">Team Name</h4>
-      <p class="teamDescription">Team Description</p>
+      <h4 id="pch4" class="charName">Character Name</h4>
+      <h5 id="pch5" class="charRace">Race</h5>
+      <img id="pcimg" class="iconImg" src="" alt="">
+      <p id="pcbio" class="bio">Character Bio</p>
       <ul>
-        <li class="wins">0</li>
-        <li class="losses">0</li>
-        <li class="draws">0</li>
+        <li id="pcpower" class="power">F</li>
+        <li id="pcspeed" class="speed">F</li>
+        <li id="pctechnique" class="technique">F</li>
+        <li id="pcreach" class="reach">F</li>
+        <li id="pcenergy" class="energy">F</li>
+        <li id="pcEaseOfUse" class="easeOfUse">F</li>
       </ul>
-      <img class="PC" src="" alt="">
-      <img class="Alt1" src="" alt="">
-      <img class="Alt2" src="" alt="">
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-light btn z-depth-5 yellow accent-4 black-text">Exit</a>
+      <a style="display:none;" href="#!"  id="removePcFromTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 deep-orange accent-4 "><i class="material-icons right">backspace</i>Remove from team</a>
+      </a>
+      <a style="display:none;" href="#!" id="removeAlt1FromTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 deep-orange accent-4 "><i class="material-icons right">backspace</i>Remove from team</a>
+      </a>
+      <a style="display:none;" href="#!" id="removeAlt2FromTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 deep-orange accent-4 "><i class="material-icons right">backspace</i>Remove from team</a>
+      </a>
     </div>
   </div>
 

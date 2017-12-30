@@ -28,7 +28,7 @@ fetch(baseURL)
           if (glbresponse[0][j].name === event.target.alt) {
             document.querySelector(".charName").textContent =
               glbresponse[0][j].name;
-            document.querySelector("h5").textContent =
+            document.querySelector(".charRace").textContent =
               "Race: " + glbresponse[0][j].race;
             document.querySelector(".iconImg").src = glbresponse[0][j].image;
             document.querySelector(".iconImg").alt = glbresponse[0][j].name;
@@ -69,20 +69,125 @@ document.querySelector("#addToTeam").addEventListener("click", () => {
     pointCharacter = document.querySelector(".iconImg").src;
     PCName.textContent = document.querySelector(".charName").textContent;
     pointCharName = document.querySelector(".charName").textContent;
+    // For PC Modal
+    var pcAtag = document.querySelector("#pcAtag");
+    pcAtag.classList.add("modal-trigger");
+    pcAtag.href = "#modal3";
+    pcAtag.addEventListener("click", () => {
+      for (var j = 0; j < glbresponse[0].length; j++) {
+        if (glbresponse[0][j].name === event.target.alt) {
+          document.querySelector("#pch4").textContent = glbresponse[0][j].name;
+          document.querySelector("#pch5").textContent =
+            "Race: " + glbresponse[0][j].race;
+          document.querySelector("#pcimg").src = glbresponse[0][j].image;
+          document.querySelector("#pcimg").alt = glbresponse[0][j].name;
+          document.querySelector("#pcbio").textContent = glbresponse[0][j].bio;
+          document.querySelector("#pcpower").textContent =
+            "Power: " + glbresponse[0][j].Power;
+          document.querySelector("#pcspeed").textContent =
+            "Speed: " + glbresponse[0][j].Speed;
+          document.querySelector("#pctechnique").textContent =
+            "Technique: " + glbresponse[0][j].Technique;
+          document.querySelector("#pcreach").textContent =
+            "Reach: " + glbresponse[0][j].Reach;
+          document.querySelector("#pcenergy").textContent =
+            "Energy: " + glbresponse[0][j].Energy;
+          document.querySelector("#pcEaseOfUse").textContent =
+            "Ease of use: " + glbresponse[0][j]["Ease of use"];
+        }
+      }
+      document.querySelector("#removePcFromTeam").style.display = "";
+      document.querySelector("#removeAlt1FromTeam").style.display = "none";
+      document.querySelector("#removeAlt2FromTeam").style.display = "none";
+      addListener("#removePcFromTeam", pointChar, PCName, pcAtag);
+    });
   } else if (!alt1.alt) {
     alt1.src = document.querySelector(".iconImg").src;
     alt1.alt = document.querySelector(".iconImg").alt;
     altCharacter1 = document.querySelector(".iconImg").src;
     A1Name.textContent = document.querySelector(".charName").textContent;
     alt1CharName = document.querySelector(".charName").textContent;
+    // For Alt1 Modal
+    var alt1Atag = document.querySelector("#alt1Atag");
+    alt1Atag.classList.add("modal-trigger");
+    alt1Atag.href = "#modal3";
+    alt1Atag.addEventListener("click", () => {
+      for (var j = 0; j < glbresponse[0].length; j++) {
+        if (glbresponse[0][j].name === event.target.alt) {
+          document.querySelector("#pch4").textContent = glbresponse[0][j].name;
+          document.querySelector("#pch5").textContent =
+            "Race: " + glbresponse[0][j].race;
+          document.querySelector("#pcimg").src = glbresponse[0][j].image;
+          document.querySelector("#pcimg").alt = glbresponse[0][j].name;
+          document.querySelector("#pcbio").textContent = glbresponse[0][j].bio;
+          document.querySelector("#pcpower").textContent =
+            "Power: " + glbresponse[0][j].Power;
+          document.querySelector("#pcspeed").textContent =
+            "Speed: " + glbresponse[0][j].Speed;
+          document.querySelector("#pctechnique").textContent =
+            "Technique: " + glbresponse[0][j].Technique;
+          document.querySelector("#pcreach").textContent =
+            "Reach: " + glbresponse[0][j].Reach;
+          document.querySelector("#pcenergy").textContent =
+            "Energy: " + glbresponse[0][j].Energy;
+          document.querySelector("#pcEaseOfUse").textContent =
+            "Ease of use: " + glbresponse[0][j]["Ease of use"];
+        }
+      }
+      document.querySelector("#removeAlt1FromTeam").style.display = "";
+      document.querySelector("#removePcFromTeam").style.display = "none";
+      document.querySelector("#removeAlt2FromTeam").style.display = "none";
+      addListener("#removeAlt1FromTeam", alt1, A1Name, alt1Atag);
+    });
   } else if (!alt2.alt) {
     alt2.src = document.querySelector(".iconImg").src;
     alt2.alt = document.querySelector(".iconImg").alt;
     altCharacter2 = document.querySelector(".iconImg").src;
     A2Name.textContent = document.querySelector(".charName").textContent;
     alt2CharName = document.querySelector(".charName").textContent;
+    // For Alt2 Modal
+    var alt2Atag = document.querySelector("#alt2Atag");
+    alt2Atag.classList.add("modal-trigger");
+    alt2Atag.href = "#modal3";
+    alt2Atag.addEventListener("click", event => {
+      for (var j = 0; j < glbresponse[0].length; j++) {
+        if (glbresponse[0][j].name === event.target.alt) {
+          document.querySelector("#pch4").textContent = glbresponse[0][j].name;
+          document.querySelector("#pch5").textContent =
+            "Race: " + glbresponse[0][j].race;
+          document.querySelector("#pcimg").src = glbresponse[0][j].image;
+          document.querySelector("#pcimg").alt = glbresponse[0][j].name;
+          document.querySelector("#pcbio").textContent = glbresponse[0][j].bio;
+          document.querySelector("#pcpower").textContent =
+            "Power: " + glbresponse[0][j].Power;
+          document.querySelector("#pcspeed").textContent =
+            "Speed: " + glbresponse[0][j].Speed;
+          document.querySelector("#pctechnique").textContent =
+            "Technique: " + glbresponse[0][j].Technique;
+          document.querySelector("#pcreach").textContent =
+            "Reach: " + glbresponse[0][j].Reach;
+          document.querySelector("#pcenergy").textContent =
+            "Energy: " + glbresponse[0][j].Energy;
+          document.querySelector("#pcEaseOfUse").textContent =
+            "Ease of use: " + glbresponse[0][j]["Ease of use"];
+        }
+      }
+      document.querySelector("#removeAlt2FromTeam").style.display = "";
+      document.querySelector("#removePcFromTeam").style.display = "none";
+      document.querySelector("#removeAlt1FromTeam").style.display = "none";
+      addListener("#removeAlt2FromTeam", alt2, A2Name, alt2Atag);
+    });
   }
 });
+function addListener(button, teamMemberSlot, teamMemberName, teamMemberAtag) {
+  document.querySelector(button).addEventListener("click", () => {
+    teamMemberSlot.src = "/Assets/placeholder-pic.png";
+    teamMemberSlot.alt = "";
+    teamMemberName.textContent = "";
+    teamMemberAtag.classList.remove("modal-trigger");
+    teamMemberAtag.href = "#!";
+  });
+}
 
 function sendFormData() {
   fetch(baseURL, {
@@ -95,28 +200,14 @@ function sendFormData() {
     .then(response => response.json())
     .then(response => {
       var message = document.querySelector("p");
-      message.textContent = response[0].teamName + " was added To Your Saved TeamZ!";
+      message.textContent =
+        response[0].teamName + " was added To Your Saved TeamZ!";
       setTimeout(() => {
         message.textContent = "";
       }, 4000);
-      var savedTeam = document.querySelector(".savedTeam");
-      savedTeam.textContent = response[0].teamName;
-      savedTeam.classList.add(
-        "btn",
-        "modal-trigger"
-      );
-      savedTeam.href = "#modal2";
-      savedTeam.addEventListener("click", () => {
-        document.querySelector(".teamName").textContent = response[0].teamName;
-        document.querySelector(".teamDescription").textContent =
-          response[0].teamDescription;
-        document.querySelector(".wins").textContent = response[0].wins;
-        document.querySelector(".losses").textContent = response[0].losses;
-        document.querySelector(".draws").textContent = response[0].draws;
-        document.querySelector(".PC").src = response[0].pc;
-        document.querySelector(".Alt1").src = response[0].alt1;
-        document.querySelector(".Alt2").src = response[0].alt2;
-      });
+      setTimeout(() => {
+        window.location.reload(true);
+      }, 4000);
     })
     .catch(err => console.log(err));
 }
@@ -126,9 +217,13 @@ document.querySelector("form").addEventListener("submit", event => {
   if (!pointChar.alt || !alt1.alt || !alt2.alt) {
     window.alert("Your team is incomplete, please choose 3 FighterZ!");
   } else if (!tName.value) {
-    window.alert("Your Team Name is incomplete, please give your team of FighterZ a fitting Team Name!");
+    window.alert(
+      "Your Team Name is incomplete, please give your team of FighterZ a fitting Team Name!"
+    );
   } else if (!tDescription.value) {
-    window.alert("Your Team Description is incomplete, please give your team of FighterZ a fitting Team Description!");
+    window.alert(
+      "Your Team Description is incomplete, please give your team of FighterZ a fitting Team Description!"
+    );
   } else {
     sendFormData();
   }

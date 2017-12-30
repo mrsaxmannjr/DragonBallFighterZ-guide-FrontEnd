@@ -26,6 +26,35 @@ fetch(`${baseURL}saved-teamz`)
           pointCharacter = document.querySelector("#PC").src;
           document.querySelector("#PCName").textContent = glbresponse[0][j].pcName;
           pointCharName = document.querySelector("#PCName").textContent;
+
+          var pcAtag = document.querySelector("#pcAtag");
+          pcAtag.classList.add("modal-trigger");
+          pcAtag.href = "#modal1";
+          pcAtag.addEventListener("click", event => {
+            for (var j = 0; j < glbresponse[0].length; j++) {
+              if (glbresponse[0][j].name === event.target.alt) {
+                document.querySelector(".charName").textContent =
+                  glbresponse[0][j].name;
+                document.querySelector("h5").textContent =
+                  "Race: " + glbresponse[0][j].race;
+                document.querySelector(".iconImg").src = glbresponse[0][j].image;
+                document.querySelector(".iconImg").alt = glbresponse[0][j].name;
+                document.querySelector(".bio").textContent = glbresponse[0][j].bio;
+                document.querySelector(".power").textContent =
+                  "Power: " + glbresponse[0][j].Power;
+                document.querySelector(".speed").textContent =
+                  "Speed: " + glbresponse[0][j].Speed;
+                document.querySelector(".technique").textContent =
+                  "Technique: " + glbresponse[0][j].Technique;
+                document.querySelector(".reach").textContent =
+                  "Reach: " + glbresponse[0][j].Reach;
+                document.querySelector(".energy").textContent =
+                  "Energy: " + glbresponse[0][j].Energy;
+                document.querySelector(".easeOfUse").textContent =
+                  "Ease of use: " + glbresponse[0][j]["Ease of use"];
+              }
+            }
+          });
           document.querySelector("#Alt1").src = glbresponse[0][j].alt1;
           altCharacter1 = document.querySelector("#Alt1").src;
           document.querySelector("#Alt1Name").textContent = glbresponse[0][j].alt1Name;
@@ -61,10 +90,10 @@ function sendFormData() {
       message.textContent = response;
       setTimeout(() => {
         message.textContent = "";
-      }, 5000);
+      }, 4000);
       setTimeout(() => {
         window.location.reload(true);
-      }, 5000);
+      }, 4000);
     })
     .catch(err => console.log(err));
 }

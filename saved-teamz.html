@@ -74,7 +74,9 @@
           <div class="teamPalette">
             <div class="pcCol center-align">
               <label class="white-text" for="PC">Point Character</label>
-              <img id="PC" src="/Assets/placeholder-pic.png" alt="">
+              <a id="pcAtag" href="">
+                <img id="PC" src="/Assets/placeholder-pic.png" alt="">
+              </a>
               <label id="PCName" class="white-text" for="PC"></label>
             </div>
             <div class="pcCol center-align">
@@ -135,7 +137,7 @@
 
         <div class="seeTeams center-align z-depth-5">
           <a href="team-builder.html">
-            <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons right">send</i>Build A New Team</button>
+            <button <a class="blue darken-2 waves-effect waves-light btn z-depth-5"><i class="material-icons left">arrow_back</i>Build A New Team</button>
           </a>
         </div>
       </div>
@@ -147,6 +149,28 @@
         <a class="grey-text text-lighten-4 right " href="https://www.bandainamcoent.com/games/dragon-ball-fighterz">DBFZ Official Page</a>
       </div>
     </footer>
+
+    <!-- Character Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class="charName">Character Name</h4>
+        <h5>Race</h5>
+        <img class="iconImg" src="" alt="">
+        <p class="bio">Character Bio</p>
+        <ul>
+          <li class="power">F</li>
+          <li class="speed">F</li>
+          <li class="technique">F</li>
+          <li class="reach">F</li>
+          <li class="energy">F</li>
+          <li class="easeOfUse">F</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-light btn z-depth-5 yellow accent-4 black-text">Exit</a>
+        <a href="#!" id="addToTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 blue darken-2 "><i class="material-icons right">add_circle</i>Add to team</a>
+      </div>
+    </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
