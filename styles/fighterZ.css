@@ -1,0 +1,38 @@
+.gif {
+  height: 44px;
+}
+
+body {
+  padding: 20px;
+}
+
+.radar-chart .area {
+  fill-opacity: 0.7;
+}
+
+.radar-chart.focus .area {
+  fill-opacity: 0.3;
+}
+
+.radar-chart.focus .area.focused {
+  fill-opacity: 0.9;
+}
+
+.area.germany, .germany .circle {
+  fill: #FFD700;
+  stroke: none;
+}
+
+.area.argentina, .argentina .circle {
+  fill: #ADD8E6;
+  stroke: none;
+}
+
+.pcCol, .footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerDiv {
+  padding-bottom: 1.25rem;
+}
