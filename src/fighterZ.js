@@ -70,3 +70,8 @@ var svg = d3.select(".chart-container").append("svg")
   .attr("width", cfg.w + cfg.w + 50)
   .attr("height", cfg.h + cfg.h / 4);
 svg.append("g").classed("single", 1).datum(randomDataset()).call(chart);
+
+$(document).ready(function() {
+  $(".button-collapse").sideNav();
+  $(".modal").modal();
+});
