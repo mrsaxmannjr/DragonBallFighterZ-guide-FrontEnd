@@ -1,77 +1,76 @@
-var data = [
+const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
+var charCarousel;
+var glbResponse = [];
+var radarTemplate = [
   {
-    className: "Goku", // optional can be used for styling
+    className: "",
     axes: [
-      {axis: "Power", value: 4},
-      {axis: "Speed", value: 2},
-      {axis: "Technique", value: 3},
-      {axis: "Reach", value: 3},
-      {axis: "Energy", value: 3}
+      { axis: "Power", value: 0 },
+      { axis: "Speed", value: 0 },
+      { axis: "Technique", value: 0 },
+      { axis: "Reach", value: 0 },
+      { axis: "Energy", value: 0 }
     ]
-  },
-  // {
-  //   className: "Vegeta",
-  //   axes: [
-  //     {axis: "Power", value: 3},
-  //     {axis: "Speed", value: 3},
-  //     {axis: "Technique", value: 2},
-  //     {axis: "Reach", value: 3},
-  //     {axis: "Energy", value: 4}
-  //   ]
-  // }
-];
-
-var stats = [
-  {
-    name: "Goku",
-    Power: 4,
-    Speed: 2,
-    Technique: 3,
-    Reach: 3,
-    Energy: 3,
-    StatTotal: 15,
-    "Ease of use": "SS",
-    StatImg: "/Assets/Character-Statsheets/gokuStats.png"
-  },
-  {
-    name: "Vegeta",
-    Power: 3,
-    Speed: 3,
-    Technique: 2,
-    Reach: 3,
-    Energy: 4,
-    StatTotal: 15,
-    "Ease of use": "SS",
-    StatImg: "/Assets/Character-Statsheets/vegetaStats.png"
   }
 ];
 
-// RadarChart.defaultConfig.color = function() {};
-// RadarChart.defaultConfig.radius = 3;
-// RadarChart.defaultConfig.w = 400;
-// RadarChart.defaultConfig.h = 400;
-// Math.ceil(Math.random() * 6)
-// RadarChart.draw(".chart-container", data);
+fetch(`${baseURL}fighterZ`)
+  .then(response => response.json())
+  .then(response => {
+    glbResponse.push(response);
+    console.log(glbResponse);
+    populateCarousel();
+  })
+  .catch(err => console.log(err));
 
-function randomDataset() {
-  return data.map(function(d) {
-    return {
-      className: d.className,
-      axes: d.axes.map(function(axis) {
-        return {axis: axis.axis, value: axis.value};
-      })
-    };
-  });
+function populateCarousel() {
+  var slider = $(".carousel");
+  slider.carousel();
+  var charCarousel = document.querySelector(".carousel");
+  for (var i = 0; i < glbResponse[0].length; i++) {
+    var charAtag = document.createElement("a");
+    charAtag.classList.add("carousel-item");
+    charAtag.href = "#!";
+    var charImg = document.createElement("img");
+    charImg.src = glbResponse[0][i].image;
+    charImg.alt = glbResponse[0][i].name;
+    charImg.classList.add("charImg");
+    charAtag.appendChild(charImg);
+    charAtag.addEventListener("click", event => {
+      console.log("fuck");
+      createRadar();
+    });
+    charCarousel.appendChild(charAtag);
+  }
+  if (charCarousel.classList.contains("initialized")) {
+    charCarousel.classList.remove("initialized");
+  }
+  slider.carousel();
 }
 
-var chart = RadarChart.chart();
-var cfg = chart.config(); // retrieve default config
-var svg = d3.select(".chart-container").append("svg")
-  .attr("width", cfg.w + cfg.w + 50)
-  .attr("height", cfg.h + cfg.h / 4);
-svg.append("g").classed("single", 1).datum(randomDataset()).call(chart);
+function createRadar() {
+  for (var i = 0; i < glbResponse[0].length; i++) {
+    if (glbResponse[0][i].name === event.target.alt) {
+      radarTemplate[0].className = glbResponse[0][i].name;
+      radarTemplate[0].axes[0].value = glbResponse[0][i].Power;
+      radarTemplate[0].axes[1].value = glbResponse[0][i].Speed;
+      radarTemplate[0].axes[2].value = glbResponse[0][i].Technique;
+      radarTemplate[0].axes[3].value = glbResponse[0][i].Reach;
+      radarTemplate[0].axes[4].value = glbResponse[0][i].Energy;
+
+      RadarChart.defaultConfig.radius = 3;
+      RadarChart.defaultConfig.w = 300;
+      RadarChart.defaultConfig.h = 300;
+      RadarChart.defaultConfig.levels = 5;
+      RadarChart.defaultConfig.maxValue = 5;
+      RadarChart.defaultConfig.factor = 0.85;
+      RadarChart.draw(".chart-container", radarTemplate);
+    }
+  }
+}
 
 $(document).ready(function() {
   $(".button-collapse").sideNav();
   $(".modal").modal();
+  // $(".carousel").carousel();
 });

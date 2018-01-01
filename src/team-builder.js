@@ -3,7 +3,7 @@ const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
 var glbresponse = [];
 var pointCharacter;
 var pointCharName;
-var altCharacter1;
+var altCharacter1; 
 var alt1CharName;
 var altCharacter2;
 var alt2CharName;
