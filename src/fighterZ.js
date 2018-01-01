@@ -37,7 +37,7 @@ function populateCarousel() {
     charImg.classList.add("charImg");
     charAtag.appendChild(charImg);
     charAtag.addEventListener("click", event => {
-      console.log("fuck");
+      document.querySelector("#charName").textContent = event.target.alt
       createRadar();
     });
     charCarousel.appendChild(charAtag);
@@ -72,5 +72,6 @@ function createRadar() {
 $(document).ready(function() {
   $(".button-collapse").sideNav();
   $(".modal").modal();
-  // $(".carousel").carousel();
+  $(".carousel").carousel();
+  $('.carousel').carousel('set', 4);
 });

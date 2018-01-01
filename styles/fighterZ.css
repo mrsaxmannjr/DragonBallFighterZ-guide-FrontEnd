@@ -15,13 +15,29 @@ main {
   min-height: 80vh;
 }
 
+.pickFighter {
+  background-color: rgba(159,57,49,0.95);
+  border: solid black;
+}
+
 .carousel {
-  height: 200px;
+  height: 250px;
+  border: solid black;
+  background-color: rgba(159,57,49,0.95);
 }
 
 .chart-container {
   /* overflow: hidden; */
   /* border: solid black; */
+}
+
+.carousel-item {
+
+  border: solid #ffd600;
+}
+
+.radar-chart .area {
+  fill-opacity: 0.5;
 }
 
 
