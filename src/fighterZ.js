@@ -72,6 +72,4 @@ function createRadar() {
 $(document).ready(function() {
   $(".button-collapse").sideNav();
   $(".modal").modal();
-  $(".carousel").carousel();
-  $('.carousel').carousel('set', 4);
 });
