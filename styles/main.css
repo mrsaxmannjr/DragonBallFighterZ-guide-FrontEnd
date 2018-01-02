@@ -19,10 +19,6 @@ main {
   min-height: 80vh;
 }
 
-.gif {
-  height: 44px;
-}
-
 .teamPalette {
   display: flex;
   justify-content: space-around;

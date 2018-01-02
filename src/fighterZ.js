@@ -37,6 +37,12 @@ function populateCarousel() {
     charAtag.appendChild(charImg);
     charAtag.addEventListener("click", event => {
       document.querySelector("#charName").textContent = event.target.alt;
+
+      for (var j = 0; j < glbResponse[0].length; j++) {
+        if (glbResponse[0][j].name === event.target.alt) {
+          document.querySelector("#charStats").src = glbResponse[0][j].StatImg;
+        }
+      }
       createRadar();
     });
 

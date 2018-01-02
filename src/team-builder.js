@@ -3,7 +3,7 @@ const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
 var glbresponse = [];
 var pointCharacter;
 var pointCharName;
-var altCharacter1; 
+var altCharacter1;
 var alt1CharName;
 var altCharacter2;
 var alt2CharName;
@@ -29,8 +29,6 @@ fetch(baseURL)
             document.querySelector(".statImg").src = glbresponse[0][j].StatImg;
             document.querySelector(".charName").textContent =
               glbresponse[0][j].name;
-            document.querySelector(".charRace").textContent =
-              "Race: " + glbresponse[0][j].race;
             document.querySelector(".iconImg").src = glbresponse[0][j].image;
             document.querySelector(".iconImg").alt = glbresponse[0][j].name;
             document.querySelector(".bio").textContent = glbresponse[0][j].bio;
@@ -78,8 +76,6 @@ document.querySelector("#addToTeam").addEventListener("click", () => {
       for (var j = 0; j < glbresponse[0].length; j++) {
         if (glbresponse[0][j].name === event.target.alt) {
           document.querySelector("#pch4").textContent = glbresponse[0][j].name;
-          document.querySelector("#pch5").textContent =
-            "Race: " + glbresponse[0][j].race;
           document.querySelector("#pcimg").src = glbresponse[0][j].image;
           document.querySelector("#pcimg").alt = glbresponse[0][j].name;
           document.querySelector("#pcbio").textContent = glbresponse[0][j].bio;
@@ -116,8 +112,6 @@ document.querySelector("#addToTeam").addEventListener("click", () => {
       for (var j = 0; j < glbresponse[0].length; j++) {
         if (glbresponse[0][j].name === event.target.alt) {
           document.querySelector("#pch4").textContent = glbresponse[0][j].name;
-          document.querySelector("#pch5").textContent =
-            "Race: " + glbresponse[0][j].race;
           document.querySelector("#pcimg").src = glbresponse[0][j].image;
           document.querySelector("#pcimg").alt = glbresponse[0][j].name;
           document.querySelector("#pcbio").textContent = glbresponse[0][j].bio;
@@ -154,8 +148,6 @@ document.querySelector("#addToTeam").addEventListener("click", () => {
       for (var j = 0; j < glbresponse[0].length; j++) {
         if (glbresponse[0][j].name === event.target.alt) {
           document.querySelector("#pch4").textContent = glbresponse[0][j].name;
-          document.querySelector("#pch5").textContent =
-            "Race: " + glbresponse[0][j].race;
           document.querySelector("#pcimg").src = glbresponse[0][j].image;
           document.querySelector("#pcimg").alt = glbresponse[0][j].name;
           document.querySelector("#pcbio").textContent = glbresponse[0][j].bio;

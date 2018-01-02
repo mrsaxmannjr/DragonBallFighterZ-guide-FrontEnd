@@ -1,5 +1,9 @@
-.gif {
-  height: 44px;
+html {
+  background-image: url("/Assets/logo.png") ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size: contain;
 }
 
 body {
@@ -20,8 +24,20 @@ main {
   border: solid black;
 }
 
+.controllerImg {
+  background-color: rgba(159,57,49,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#charStats {
+  max-width: 100%;
+	height: auto;
+}
+
 .carousel {
-  height: 250px;
+  height: 220px;
   border: solid black;
   background-color: rgba(159,57,49,0.95);
 }
