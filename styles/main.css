@@ -3,9 +3,9 @@ html {
 			background-position: center center;
 			background-repeat:  no-repeat;
 			background-attachment: fixed;
-			background-size:  cover;
+			background-size: contain;
 }
- 
+
 body {
   display: flex;
   min-height: 100vh;

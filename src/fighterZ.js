@@ -34,14 +34,15 @@ function populateCarousel() {
     var charImg = document.createElement("img");
     charImg.src = glbResponse[0][i].image;
     charImg.alt = glbResponse[0][i].name;
-    charImg.classList.add("charImg");
     charAtag.appendChild(charImg);
     charAtag.addEventListener("click", event => {
-      document.querySelector("#charName").textContent = event.target.alt
+      document.querySelector("#charName").textContent = event.target.alt;
       createRadar();
     });
+
     charCarousel.appendChild(charAtag);
   }
+
   if (charCarousel.classList.contains("initialized")) {
     charCarousel.classList.remove("initialized");
   }
