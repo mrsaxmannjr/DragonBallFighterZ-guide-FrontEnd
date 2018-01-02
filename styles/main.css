@@ -60,7 +60,7 @@ form {
 .characterPalette {
   background-color: rgba(159,57,49,0.95);
   margin-bottom: .85rem;
-  max-height: 11.4rem;
+  max-height: 11.2rem;
   max-width: 100%;
   border: solid black;
   display: flex;

@@ -24,32 +24,40 @@ main {
   border: solid black;
 }
 
-.controllerImg {
-  background-color: rgba(159,57,49,0.95);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#charStats {
-  max-width: 100%;
-	height: auto;
-}
-
 .carousel {
   height: 220px;
-  border: solid black;
-  background-color: rgba(159,57,49,0.95);
-}
-
-.chart-container {
-  /* overflow: hidden; */
-  /* border: solid black; */
 }
 
 .carousel-item {
-
   border: solid #ffd600;
+}
+
+.stats {
+  background: linear-gradient(rgba(159,57,49,0.95), rgba(250,214,72,0.95));
+  border: solid black;
+  margin-bottom: .85rem;
+  max-height: 48.5rem;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#statTotal {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#bio {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#wikiLink {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .radar-chart .area {

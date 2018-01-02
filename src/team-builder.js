@@ -26,7 +26,7 @@ fetch(baseURL)
       charAtag.addEventListener("click", event => {
         for (var j = 0; j < glbresponse[0].length; j++) {
           if (glbresponse[0][j].name === event.target.alt) {
-            document.querySelector(".statImg").src = glbresponse[0][j].StatImg;
+            // document.querySelector(".statImg").src = glbresponse[0][j].StatImg;
             document.querySelector(".charName").textContent =
               glbresponse[0][j].name;
             document.querySelector(".iconImg").src = glbresponse[0][j].image;

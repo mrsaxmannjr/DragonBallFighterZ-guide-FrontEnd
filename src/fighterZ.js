@@ -40,7 +40,11 @@ function populateCarousel() {
 
       for (var j = 0; j < glbResponse[0].length; j++) {
         if (glbResponse[0][j].name === event.target.alt) {
-          document.querySelector("#charStats").src = glbResponse[0][j].StatImg;
+          document.querySelector("#bio").textContent = glbResponse[0][j].bio;
+          document.querySelector("#wikiLink").href = glbResponse[0][j].url;
+          document.querySelector("#wikiLink").textContent = glbResponse[0][j].name + " Dragon Ball Wiki page";
+          document.querySelector("#statTotal").textContent = "Stat Total: " + glbResponse[0][j].StatTotal;
+
         }
       }
       createRadar();
