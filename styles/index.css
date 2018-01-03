@@ -1,4 +1,10 @@
+.nav-wrapper {
+  background: linear-gradient(rgba(107,10,0,0.95), rgba(159,57,49,0.95));
+}
 
+h4, h2 {
+  background: linear-gradient(rgba(250,214,72,0.95), rgba(242, 227, 171,0.95) );
+}
 .parallax-container {
       height: 200px;
 }
@@ -14,4 +20,8 @@ a {
 
 .footerDiv {
   padding-bottom: 1.25rem;
+}
+
+.page-footer {
+  background: linear-gradient(rgba(159,57,49,0.95), rgba(107,10,0,0.95));
 }

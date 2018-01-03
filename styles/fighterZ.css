@@ -12,6 +12,10 @@ body {
   flex-direction: column;
 }
 
+.nav-wrapper {
+  background: linear-gradient(rgba(107,10,0,0.95), rgba(159,57,49,0.95));
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -21,7 +25,7 @@ main {
 
 .pickFighter {
   background-color: rgba(159,57,49,0.95);
-  border: solid black;
+  /* border: solid black; */
 }
 
 .carousel {
@@ -34,7 +38,7 @@ main {
 
 .stats {
   background: linear-gradient(rgba(159,57,49,0.95), rgba(250,214,72,0.95));
-  border: solid black;
+  /* border: solid black; */
   margin-bottom: .85rem;
   max-height: 48.5rem;
   max-width: 100%;
@@ -64,6 +68,9 @@ main {
   fill-opacity: 0.5;
 }
 
+.page-footer {
+  background: linear-gradient(rgba(159,57,49,0.95), rgba(107,10,0,0.95));
+}
 
 .pcCol, .footer {
   display: flex;

@@ -195,7 +195,7 @@ function sendFormData() {
     .then(response => {
       var message = document.querySelector("p");
       message.textContent =
-        response[0].teamName + " was added to your Saved TeamZ!";
+        response[0].teamName + " was added to your Saved TeamZ!"; 
       setTimeout(() => {
         message.textContent = "";
       }, 4000);

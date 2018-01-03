@@ -49,30 +49,30 @@ function populateCarousel() {
       }
       createRadar();
     });
-    // charCarousel.addEventListener("touchend", handler, false);
-    //
-    // function handler(event) {
-    //   event.preventDefault();
-    //   document.querySelector("#charName").textContent = event.target.alt;
-    //   var carouselItems = document.querySelectorAll(".carousel-item");
-    //   for (var i = 0; i < carouselItems.length; i++) {
-    //     if (carouselItems[i].classList.contains("active")) {
-    //       for (var j = 0; j < glbResponse[0].length; j++) {
-    //         if (glbResponse[0][j].name === event.target.alt) {
-    //           document.querySelector("#bio").textContent =
-    //             glbResponse[0][j].bio;
-    //           document.querySelector("#wikiLink").href = glbResponse[0][j].url;
-    //           document.querySelector("#wikiLink").textContent =
-    //             glbResponse[0][j].name + " Dragon Ball Wiki page";
-    //           document.querySelector("#statTotal").textContent =
-    //             "Stat Total: " + glbResponse[0][j].StatTotal;
-    //         }
-    //       }
-    //     }
-    //   }
-    //
-    //   createRadar();
-    // }
+    charCarousel.addEventListener("touchend", handler, true);
+
+    function handler(event) {
+      event.preventDefault();
+      document.querySelector("#charName").textContent = event.target.alt;
+      var carouselItems = document.querySelectorAll(".carousel-item");
+      for (var i = 0; i < carouselItems.length; i++) {
+        if (carouselItems[i].classList.contains("active")) {
+          for (var j = 0; j < glbResponse[0].length; j++) {
+            if (glbResponse[0][j].name === event.target.alt) {
+              document.querySelector("#bio").textContent =
+                glbResponse[0][j].bio;
+              document.querySelector("#wikiLink").href = glbResponse[0][j].url;
+              document.querySelector("#wikiLink").textContent =
+                glbResponse[0][j].name + " Dragon Ball Wiki page";
+              document.querySelector("#statTotal").textContent =
+                "Stat Total: " + glbResponse[0][j].StatTotal;
+            }
+          }
+        }
+      }
+
+      createRadar();
+    }
 
     charCarousel.appendChild(charAtag);
   }

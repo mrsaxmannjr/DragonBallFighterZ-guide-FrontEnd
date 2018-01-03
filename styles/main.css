@@ -12,6 +12,10 @@ body {
   flex-direction: column;
 }
 
+.nav-wrapper {
+  background: linear-gradient(rgba(107,10,0,0.95), rgba(159,57,49,0.95));
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -28,7 +32,6 @@ main {
 
 .pickFighter {
   background-color: rgba(159,57,49,0.95);
-  border: solid black;
 }
 
 .cFighter {
@@ -43,7 +46,10 @@ main {
 form {
   margin-bottom: .85rem;
   background-color: rgba(159,57,49,0.95);
-  border: solid black;
+}
+
+select {
+  border: solid rgba(159,57,49,0.95);
 }
 
 .teamForm {
@@ -66,7 +72,6 @@ form {
   margin-bottom: .85rem;
   max-height: 11.2rem;
   max-width: 100%;
-  border: solid black;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
@@ -111,7 +116,6 @@ form {
 }
 
 .addBorder, th, td {
-  border: solid black;
 }
 
 .addFrame {
@@ -128,7 +132,6 @@ form {
 
 .collapsible-body {
   background-color: rgba(159,57,49,0.95);
-  border: solid black;
   border-top: none;
 }
 
@@ -149,21 +152,22 @@ ul.browser-default li {
 
 .seeTeams {
   background-color: rgba(159,57,49,0.95);
-  border: solid black;
   padding: 1rem;
   margin-bottom: .85rem;
 }
 
 .collapsible-header {
-  border: solid black;
   margin-top: 1rem;
 }
 
 .video-container {
   background-color: rgba(159,57,49,0.95);
-  border: solid black;
 }
 
 .record {
   padding-left: .75rem;
+}
+
+.page-footer {
+  background: linear-gradient(rgba(159,57,49,0.95), rgba(107,10,0,0.95));
 }
