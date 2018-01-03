@@ -76,6 +76,12 @@
         </form>
 
         <form id="hideForm" style="display:none;" class="teamForm col s8 z-depth-5">
+          <div class="charDiv z-depth-5">
+            <div class="characterPalette "></div>
+          </div>
+          <div class="center-align ">
+            <h4 class=" white-text col12">Change FighterZ</h4>
+          </div>
           <div class="teamPalette">
             <div class="pcCol center-align">
               <label class="white-text" for="PC">Point Character</label>
@@ -164,6 +170,7 @@
     <!-- Character Modal Structure -->
     <div id="modal1" class="modal">
       <div class="modal-content">
+        <!-- <img src="" alt="" class="statImg container"> -->
         <h4 class="charName">Character Name</h4>
         <img class="iconImg" src="" alt="">
         <p class="bio">Character Bio</p>
@@ -179,6 +186,32 @@
       <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-light btn z-depth-5 yellow accent-4 black-text">Exit</a>
         <a href="#!" id="addToTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 blue darken-2 "><i class="material-icons right">add_circle</i>Add to team</a>
+      </div>
+    </div>
+
+    <!-- Team Member Modal Structure -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4 id="pch4" class="charName">Character Name</h4>
+        <img id="pcimg" class="iconImg" src="" alt="">
+        <p id="pcbio" class="bio">Character Bio</p>
+        <ul>
+          <li id="pcpower" class="power">F</li>
+          <li id="pcspeed" class="speed">F</li>
+          <li id="pctechnique" class="technique">F</li>
+          <li id="pcreach" class="reach">F</li>
+          <li id="pcenergy" class="energy">F</li>
+          <li id="pcEaseOfUse" class="easeOfUse">F</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-light btn z-depth-5 yellow accent-4 black-text">Exit</a>
+        <a style="display:none;" href="#!"  id="removePcFromTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 deep-orange accent-4 "><i class="material-icons right">backspace</i>Remove from team</a>
+        </a>
+        <a style="display:none;" href="#!" id="removeAlt1FromTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 deep-orange accent-4 "><i class="material-icons right">backspace</i>Remove from team</a>
+        </a>
+        <a style="display:none;" href="#!" id="removeAlt2FromTeam" class="white-text modal-action modal-close waves-effect waves-light btn z-depth-5 deep-orange accent-4 "><i class="material-icons right">backspace</i>Remove from team</a>
+        </a>
       </div>
     </div>
 

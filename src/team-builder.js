@@ -1,3 +1,5 @@
+localStorage.setItem("it","worked");
+
 const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
 
 var glbresponse = [];
