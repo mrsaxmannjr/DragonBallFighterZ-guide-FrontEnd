@@ -156,7 +156,6 @@ function alt2Listener () {
 fetch(baseURL)
   .then(response => response.json())
   .then(response => {
-    console.log(response);
     glbresponse.push(response);
     var charPalette = document.querySelector(".characterPalette");
     for (var i = 0; i < response.length; i++) {
@@ -373,6 +372,7 @@ function getFormData() {
 
 document.querySelector("select").addEventListener("input", () => {
   document.querySelector("#hideForm").style.display = "";
+  document.querySelector(".charDiv").style.display = "";
 });
 
 document.querySelector("#wins").addEventListener("click", () => {

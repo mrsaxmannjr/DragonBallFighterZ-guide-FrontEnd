@@ -31,6 +31,10 @@ main {
   border: solid black;
 }
 
+.cFighter {
+  margin-top: -.5rem;
+}
+
 .pcCol, .footer{
   display: flex;
   flex-direction: column;

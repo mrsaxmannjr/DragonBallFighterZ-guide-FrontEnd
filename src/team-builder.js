@@ -13,7 +13,6 @@ var alt2CharName;
 fetch(baseURL)
   .then(response => response.json())
   .then(response => {
-    console.log(response);
     glbresponse.push(response);
     var charPalette = document.querySelector(".characterPalette");
     for (var i = 0; i < response.length; i++) {
