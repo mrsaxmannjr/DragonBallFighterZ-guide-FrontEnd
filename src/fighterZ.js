@@ -25,17 +25,19 @@ fetch(`${baseURL}fighterZ`)
 
 function populateCarousel() {
   var slider = $(".carousel");
-  slider.carousel();
+  // slider.carousel({  });
   var charCarousel = document.querySelector(".carousel");
   for (var i = 0; i < glbResponse[0].length; i++) {
     var charAtag = document.createElement("a");
     charAtag.classList.add("carousel-item");
     charAtag.href = "#!";
+    charAtag.index = i
     var charImg = document.createElement("img");
     charImg.src = glbResponse[0][i].image;
     charImg.alt = glbResponse[0][i].name;
     charAtag.appendChild(charImg);
-    charAtag.addEventListener("click", event => {
+
+    const clickHandler = event => {
       document.querySelector("#charName").textContent = event.target.alt;
       for (var j = 0; j < glbResponse[0].length; j++) {
         if (glbResponse[0][j].name === event.target.alt) {
@@ -48,28 +50,38 @@ function populateCarousel() {
         }
       }
       createRadar();
-    });
-    charCarousel.addEventListener("touchend", handler, true);
-
+    }
+    charAtag.addEventListener("click", handler);
+    charAtag.addEventListener("touchend", handler);
     function handler(event) {
-      event.preventDefault();
-      document.querySelector("#charName").textContent = event.target.alt;
-      var carouselItems = document.querySelectorAll(".carousel-item");
-      for (var i = 0; i < carouselItems.length; i++) {
-        if (carouselItems[i].classList.contains("active")) {
-          for (var j = 0; j < glbResponse[0].length; j++) {
-            if (glbResponse[0][j].name === event.target.alt) {
-              document.querySelector("#bio").textContent =
-                glbResponse[0][j].bio;
-              document.querySelector("#wikiLink").href = glbResponse[0][j].url;
-              document.querySelector("#wikiLink").textContent =
-                glbResponse[0][j].name + " Dragon Ball Wiki page";
-              document.querySelector("#statTotal").textContent =
-                "Stat Total: " + glbResponse[0][j].StatTotal;
-            }
-          }
-        }
-      }
+      // event.preventDefault();
+      const lnk = event.target.tagName === 'A' ? event.target : event.target.parentNode;
+      const idx = $(lnk).index();
+      console.log('Image IDX:', idx, lnk);
+      clickHandler(event)
+      setTimeout(() => {
+        $('.carousel').carousel('set', idx);
+      }, 10)
+       // charCarousel.carousel
+      //
+      // clickHandler(event);
+      // document.querySelector("#charName").textContent = event.target.alt;
+      // var carouselItems = document.querySelectorAll(".carousel-item");
+      // for (var i = 0; i < carouselItems.length; i++) {
+      //   if (carouselItems[i].classList.contains("active")) {
+      //     for (var j = 0; j < glbResponse[0].length; j++) {
+      //       if (glbResponse[0][j].name === event.target.alt) {
+      //         document.querySelector("#bio").textContent =
+      //           glbResponse[0][j].bio;
+      //         document.querySelector("#wikiLink").href = glbResponse[0][j].url;
+      //         document.querySelector("#wikiLink").textContent =
+      //           glbResponse[0][j].name + " Dragon Ball Wiki page";
+      //         document.querySelector("#statTotal").textContent =
+      //           "Stat Total: " + glbResponse[0][j].StatTotal;
+      //       }
+      //     }
+      //   }
+      // }
 
       createRadar();
     }
@@ -77,10 +89,17 @@ function populateCarousel() {
     charCarousel.appendChild(charAtag);
   }
 
-  if (charCarousel.classList.contains("initialized")) {
-    charCarousel.classList.remove("initialized");
-  }
-  slider.carousel();
+  // if (charCarousel.classList.contains("initialized")) {
+  //   charCarousel.classList.remove("initialized");
+  // }
+  slider.carousel({
+    // onCycleTo: function (ele, dragged) {
+    //   // console.log(ele[0]);
+    //   // console.log($(ele).index()); // the slide's index
+    //   // console.log(dragged);
+    // }
+
+  });
 }
 
 function createRadar() {
