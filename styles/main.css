@@ -70,7 +70,7 @@ select {
 .characterPalette {
   background-color: rgba(159,57,49,0.95);
   margin-bottom: .85rem;
-  max-height: 11.2rem;
+  max-height: 22.1rem;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
