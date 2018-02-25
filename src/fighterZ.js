@@ -31,7 +31,7 @@ function populateCarousel() {
     var charAtag = document.createElement("a");
     charAtag.classList.add("carousel-item");
     charAtag.href = "#!";
-    charAtag.index = i
+    charAtag.index = i;
     var charImg = document.createElement("img");
     charImg.src = glbResponse[0][i].image;
     charImg.alt = glbResponse[0][i].name;
@@ -50,19 +50,19 @@ function populateCarousel() {
         }
       }
       createRadar();
-    }
+    };
     charAtag.addEventListener("click", handler);
     charAtag.addEventListener("touchend", handler);
     function handler(event) {
       // event.preventDefault();
-      const lnk = event.target.tagName === 'A' ? event.target : event.target.parentNode;
+      const lnk = event.target.tagName === "A" ? event.target : event.target.parentNode;
       const idx = $(lnk).index();
-      console.log('Image IDX:', idx, lnk);
-      clickHandler(event)
+      console.log("Image IDX:", idx, lnk);
+      clickHandler(event);
       setTimeout(() => {
-        $('.carousel').carousel('set', idx);
-      }, 10)
-       // charCarousel.carousel
+        $(".carousel").carousel("set", idx);
+      }, 10);
+      // charCarousel.carousel
       //
       // clickHandler(event);
       // document.querySelector("#charName").textContent = event.target.alt;
@@ -98,7 +98,6 @@ function populateCarousel() {
     //   // console.log($(ele).index()); // the slide's index
     //   // console.log(dragged);
     // }
-
   });
 }
 
