@@ -9,7 +9,7 @@ Welcome to the one-stop-shop for all your Dragon Ball FighterZ needs! Here you c
 ## FighterZ:
 Here you can see all the FighterZ currently available in the game. You can see in game character bios as well as links to the Dragon Ball Wiki, power rankings and move-sets.  Dynamically populated character carousel with dynamically populated D3.js radial graph used to diusplay character stats.
 
-![createaccount](https://user-images.githubusercontent.com/26389841/35991021-1ec1e1fc-0cc3-11e8-8dca-8bd9d1d23e86.gif)
+![fighterz]()
 
 ## Team Builder & Saved TeamZ:
 Using the Team Builder, you can browse the character roster and character stats and then add 3 FighterZ to your custom team. Here you can give your team a name, a team description and record the team's battle record. If you want to edit or update your team's information, just head over to Saved TeamZ and any changes will be saved to that team.
@@ -35,9 +35,6 @@ npm install
 ```
 * This command will install all the necessary dependencies for the Back End.
 
-# License
-MIT License Copyright (c) 2018 James Mann
-
 # Where to Find Me
 
 |<img src="https://user-images.githubusercontent.com/32685092/35991367-3e12abb2-0cc4-11e8-93a4-9da6ab4b00a8.jpg" width="100"> | James Mann|
@@ -45,3 +42,6 @@ MIT License Copyright (c) 2018 James Mann
 | Personal site| [jamesmann.tech](https://jamesmann.tech) |
 | Github| [/mrsaxmannjr](https://github.com/mrsaxmannjr) |
 | LinkedIn   | [/in/mrsaxmannjr/](https://www.linkedin.com/in/mrsaxmannjr/) |
+
+# License
+MIT License Copyright (c) 2018 James Mann
