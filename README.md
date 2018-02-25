@@ -8,6 +8,7 @@ Welcome to the one-stop-shop for all your Dragon Ball FighterZ needs! Here you c
 # Project features
 ## FighterZ:
 Here you can see all the FighterZ currently available in the game. You can see in game character bios as well as links to the Dragon Ball Wiki, power rankings and move-sets.  Dynamically populated character carousel with dynamically populated D3.js radial graph used to diusplay character stats.
+
 ![createaccount](https://user-images.githubusercontent.com/26389841/35991021-1ec1e1fc-0cc3-11e8-8dca-8bd9d1d23e86.gif)
 
 ## Team Builder & Saved TeamZ:
