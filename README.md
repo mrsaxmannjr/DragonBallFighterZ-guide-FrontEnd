@@ -3,7 +3,7 @@ Welcome to the one-stop-shop for all your Dragon Ball FighterZ needs! Here you c
 * [Live site](https://dbfzguide.com/index.html)
 * [Back End code](https://github.com/mrsaxmannjr/DBZFGuide-Server)
 
-![about]()
+<img width="1440" alt="screen shot 2018-02-27 at 11 19 39 am" src="https://user-images.githubusercontent.com/26389841/36746681-2893edfa-1bb0-11e8-9eae-1e5c8c819ef7.png">
 
 # Project features
 ## FighterZ:
