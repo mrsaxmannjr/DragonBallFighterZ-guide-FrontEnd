@@ -29,7 +29,7 @@ On the ControlZ page, you can select your contol scheme based on your console of
 ## How to Play:
 How to Play, it's all in the title! Here you will find a comprehensive list and desriptions of the basic game mechanics all the way up to the more advanced. There is also a great video from Prima Games you should checkout!
 
-![how-to-play]()
+![how-to-play-960px](https://user-images.githubusercontent.com/26389841/36745632-600d54a4-1bad-11e8-9bf1-883cca3e1b4b.gif)
 
 # Installation
 Front End: Fork [this repo](https://github.com/mrsaxmannjr/Dragon-Ball-FighterZ-guide-FrontEnd) and clone it locally. No dependencies need to be installed.
