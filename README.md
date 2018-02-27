@@ -49,10 +49,10 @@ npm install
 | Github  | [/mrsaxmannjr](https://github.com/mrsaxmannjr) |
 | LinkedIn   | [/in/mrsaxmannjr/](https://www.linkedin.com/in/mrsaxmannjr/) |
 
-|<img src="https://user-images.githubusercontent.com/32685092/35702971-d0b4e966-0757-11e8-8098-c2819dff5e58.png" width="100"> | Kevin Kingdon                    |
+|<img src="https://user-images.githubusercontent.com/32685092/35991367-3e12abb2-0cc4-11e8-93a4-9da6ab4b00a8.jpg" width="100"> | James Mann                    |
 | ------------- | ------------- |
-| Website  | [kmkingdon.info](https://kmkingdon.info) |
-| LinkIn   | [/in/kevin-kingdon/](https://www.linkedin.com/in/kevin-kingdon/) |
+| Personal site  | [jamesmann.tech](https://jamesmann.tech) |
+| LinkedIn   | [/in/mrsaxmannjr/](https://www.linkedin.com/in/mrsaxmannjr/) |
 
 
 # License
