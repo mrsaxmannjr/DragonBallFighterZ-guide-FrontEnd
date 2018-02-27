@@ -9,7 +9,7 @@ Welcome to the one-stop-shop for all your Dragon Ball FighterZ needs! Here you c
 ## FighterZ:
 Here you can see all the FighterZ currently available in the game. You can see in game character bios as well as links to the Dragon Ball Wiki, power rankings and move-sets.  Dynamically populated character carousel with dynamically populated D3.js radial graph used to diusplay character stats.
 
-![fighterz]()
+![animation-960px](https://user-images.githubusercontent.com/26389841/36742778-c5e5ab3a-1ba5-11e8-89ba-d97fdd6c2eb9.gif)
 
 ## Team Builder
 Using the Team Builder, you can browse the character roster and character stats and then add 3 FighterZ to your custom team. Here you can give your team a name, a team description and record the team's battle record. If you want to edit or update your team's information, just head over to Saved TeamZ and any changes will be saved to that team.
