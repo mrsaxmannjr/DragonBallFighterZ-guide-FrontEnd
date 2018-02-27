@@ -24,7 +24,7 @@ If you want to edit or update your team's information, just head over to Saved T
 ## ControlZ:
 On the ControlZ page, you can select your contol scheme based on your console of choice (PC users can use either). Once you have selected a control scheme, a list of the basic attacks and the buttons they are mapped to will be available.
 
-![controlz]()
+![controlz-960px](https://user-images.githubusercontent.com/26389841/36745430-b1535be8-1bac-11e8-8137-000c4df067de.gif)
 
 ## How to Play:
 How to Play, it's all in the title! Here you will find a comprehensive list and desriptions of the basic game mechanics all the way up to the more advanced. There is also a great video from Prima Games you should checkout!
