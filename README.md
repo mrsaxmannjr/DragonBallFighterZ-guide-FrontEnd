@@ -14,7 +14,7 @@ Here you can see all the FighterZ currently available in the game. You can see i
 ## Team Builder
 Using the Team Builder, you can browse the character roster and character stats and then add 3 FighterZ to your custom team. Here you can give your team a name, a team description and record the team's battle record. If you want to edit or update your team's information, just head over to Saved TeamZ and any changes will be saved to that team.
 
-![team-builder]()
+![team-builder-960px](https://user-images.githubusercontent.com/26389841/36744065-1ac1a660-1ba9-11e8-973e-4cc86b886d93.gif)
 
 ## Saved TeamZ:
 If you want to edit or update your team's information, just head over to Saved TeamZ and any changes will be saved to that team under the same team name.
