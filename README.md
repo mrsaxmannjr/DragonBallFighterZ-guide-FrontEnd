@@ -19,7 +19,7 @@ Using the Team Builder, you can browse the character roster and character stats 
 ## Saved TeamZ:
 If you want to edit or update your team's information, just head over to Saved TeamZ and any changes will be saved to that team under the same team name.
 
-![saved-teamz]()
+![saved-teamz-960px](https://user-images.githubusercontent.com/26389841/36745888-28b98c88-1bae-11e8-803d-4f67706f30bf.gif)
 
 ## ControlZ:
 On the ControlZ page, you can select your contol scheme based on your console of choice (PC users can use either). Once you have selected a control scheme, a list of the basic attacks and the buttons they are mapped to will be available.
