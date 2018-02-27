@@ -52,6 +52,7 @@ npm install
 |<img src="https://user-images.githubusercontent.com/32685092/35991367-3e12abb2-0cc4-11e8-93a4-9da6ab4b00a8.jpg" width="100"> | James Mann                    |
 | ------------- | ------------- |
 | Personal site  | [jamesmann.tech](https://jamesmann.tech) |
+| Personal site  | [jamesmann.tech](https://jamesmann.tech) |
 | LinkedIn   | [/in/mrsaxmannjr/](https://www.linkedin.com/in/mrsaxmannjr/) |
 
 
