@@ -1,7 +1,7 @@
-var form = document.querySelector(".social");
-var placeholder = document.querySelector("#controlScheme");
-var tableDiv = document.querySelector(".tableDiv");
-var controllerImg = document.querySelector(".controllerImg");
+let form = document.querySelector(".social");
+let placeholder = document.querySelector("#controlScheme");
+let tableDiv = document.querySelector(".tableDiv");
+let controllerImg = document.querySelector(".controllerImg");
 
 form.addEventListener("change", event => {
   if (event.target.value === "ps4") {
@@ -44,8 +44,9 @@ form.addEventListener("change", event => {
   }
 });
 
-$(document).ready(function() {
+$(document).ready(() => {
   $(".button-collapse").sideNav();
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $(".modal").modal();
 });
+

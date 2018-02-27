@@ -1,7 +1,7 @@
 const baseURL = "https://shrouded-castle-10979.herokuapp.com/";
 // var charCarousel;
-var glbResponse = [];
-var radarTemplate = [
+let glbResponse = [];
+let radarTemplate = [
   {
     className: "",
     axes: [
@@ -9,9 +9,9 @@ var radarTemplate = [
       { axis: "Speed", value: 0 },
       { axis: "Technique", value: 0 },
       { axis: "Reach", value: 0 },
-      { axis: "Energy", value: 0 }
-    ]
-  }
+      { axis: "Energy", value: 0 },
+    ],
+  },
 ];
 
 fetch(`${baseURL}fighterZ`)
@@ -24,29 +24,29 @@ fetch(`${baseURL}fighterZ`)
   .catch(err => console.log(err));
 
 function populateCarousel() {
-  var slider = $(".carousel");
+  let slider = $(".carousel");
   // slider.carousel({  });
-  var charCarousel = document.querySelector(".carousel");
-  for (var i = 0; i < glbResponse[0].length; i++) {
-    var charAtag = document.createElement("a");
+  let charCarousel = document.querySelector(".carousel");
+  for (let i = 0; i < glbResponse[0].length; i++) {
+    let charAtag = document.createElement("a");
     charAtag.classList.add("carousel-item");
     charAtag.href = "#!";
     charAtag.index = i;
-    var charImg = document.createElement("img");
+    let charImg = document.createElement("img");
     charImg.src = glbResponse[0][i].image;
     charImg.alt = glbResponse[0][i].name;
     charAtag.appendChild(charImg);
 
     const clickHandler = event => {
       document.querySelector("#charName").textContent = event.target.alt;
-      for (var j = 0; j < glbResponse[0].length; j++) {
+      for (let j = 0; j < glbResponse[0].length; j++) {
         if (glbResponse[0][j].name === event.target.alt) {
           document.querySelector("#bio").textContent = glbResponse[0][j].bio;
           document.querySelector("#wikiLink").href = glbResponse[0][j].url;
           document.querySelector("#wikiLink").textContent =
-            glbResponse[0][j].name + " Dragon Ball Wiki page";
+            `${glbResponse[0][j].name  } Dragon Ball Wiki page`;
           document.querySelector("#statTotal").textContent =
-            "Stat Total: " + glbResponse[0][j].StatTotal;
+            `Stat Total: ${  glbResponse[0][j].StatTotal}`;
         }
       }
       createRadar();
@@ -102,7 +102,7 @@ function populateCarousel() {
 }
 
 function createRadar() {
-  for (var i = 0; i < glbResponse[0].length; i++) {
+  for (let i = 0; i < glbResponse[0].length; i++) {
     if (glbResponse[0][i].name === event.target.alt) {
       radarTemplate[0].className = glbResponse[0][i].name;
       radarTemplate[0].axes[0].value = glbResponse[0][i].Power;
@@ -122,7 +122,8 @@ function createRadar() {
   }
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
   $(".button-collapse").sideNav();
   $(".modal").modal();
 });
+
